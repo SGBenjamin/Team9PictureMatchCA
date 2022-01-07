@@ -6,23 +6,24 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ImageButton
+    <ImageView
         android:id="@+id/welcomeSplash"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:src="@drawable/MatchPic"
+        android:src="@drawable/cards"
         app:flow_horizontalBias="0.0"
         app:layout_constraintBottom_toTopOf="@id/soloMatch12"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0"
+        android:backgroundTint="@color/white"/>
 
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Team 9 Matching Game"
-        android:textSize="45dp"
+        android:text="@string/App_title"
+        android:textSize="45sp"
         android:textAlignment="center"
         android:textStyle="bold"
         android:textColor="@color/black"
@@ -31,6 +32,37 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
+
+
+    <TextView
+        android:id="@+id/UserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25sp"
+        android:text="@string/Username"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.6" />
+
+    <TextView
+        android:id="@+id/UserId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25sp"
+        android:text="@string/UserId"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.675" />
 
     <Button
         android:id="@+id/soloMatch12"
@@ -90,12 +122,14 @@
         android:layout_height="190dp"
         android:backgroundTint="@color/teal_700"
         android:text="Download Images"
-        android:textSize="20dp"
+        android:textSize="20sp"
         app:cornerRadius="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintHorizontal_bias="0.975"/>
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
