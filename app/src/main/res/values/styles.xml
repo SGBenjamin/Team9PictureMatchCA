@@ -1,0 +1,5 @@
+<resources>
+    <style name="Fullscreen" parent="Theme.Team9PictureMatchCA">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+</resources>
