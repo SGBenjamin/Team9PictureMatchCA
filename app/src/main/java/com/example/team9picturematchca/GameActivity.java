@@ -94,7 +94,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
                 }
 
                 if (gamePaused || flipping || processing ||
-                        itemView.findViewById(R.id.gameImageView).getForeground() == null) { // layout game_row_item
+                        itemView.findViewById(R.id.imageView).getForeground() == null) { // layout game_row_item
                     return;
                 }
 
@@ -105,14 +105,14 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
 
                 if (numCardOpened == 0) {
                     // Clicked on first image
-                    firstCard = itemView.findViewById(R.id.gameImageView); // layout game_row_item
+                    firstCard = itemView.findViewById(R.id.imageView); // layout game_row_item
                     // Reveal image
                     flipCard(firstCard);
                     firstCardId = cardImages.get(position).getImagenum();
                     numCardOpened = 1;
                 } else if (numCardOpened == 1) {
                     // Clicked on second image
-                    secondCard = itemView.findViewById(R.id.gameImageView); // layout game_row_item
+                    secondCard = itemView.findViewById(R.id.imageView); // layout game_row_item
                     // Reveal image
                     flipCard(secondCard);
                     secondCardId = cardImages.get(position).getImagenum();
