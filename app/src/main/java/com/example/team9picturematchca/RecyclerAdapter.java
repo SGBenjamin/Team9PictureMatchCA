@@ -88,7 +88,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         }
 
         @Override
-        public void onClick(View view) {
+        public void onClick(View v) {
             int position = getAdapterPosition();
             if(selected.containsKey(position)){
                 selected.remove(position);

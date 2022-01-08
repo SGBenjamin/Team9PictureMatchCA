@@ -102,7 +102,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputEditText" />
 
     <TextView
-        android:id="@+id/helpText"
+        android:id="@+id/selectText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/reminder_text"
