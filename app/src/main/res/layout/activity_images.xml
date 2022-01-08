@@ -38,11 +38,11 @@
         android:enabled="false"
         android:text="@string/startBtn_text"
         android:visibility="invisible"
-        android:backgroundTint="@color/startBtn_Orange"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"/>
+<!--    android:backgroundTint="@color/startBtn_Orange"-->
 
     <AutoCompleteTextView
         android:id="@+id/textInputEditText"
