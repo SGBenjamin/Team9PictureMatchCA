@@ -5,10 +5,10 @@
     <string name="App_title">Team 9 Matching Game</string>
     <string name="UserId">User ID:</string>
 
-    <string name="scrolling_text">Welcome to Memory Game! Please enter the website URL to choose pictures.</string>
-    <string name="url_placeholder">URL</string>
-    <string name="fetch_buttontext">Fetch</string>
-    <string name="start_buttontext">Start Game</string>
+    <string name="scrollingTtl_text">Please enter the website URL to select pictures.</string>
+    <string name="url_placeholder">Enter URL here</string>
+    <string name="fetchBtn_text">Fetch</string>
+    <string name="startBtn_text">Start!</string>
     <string name="back_buttontext">Back</string>
     <string name="save_buttontext">Save Changes</string>
     <string name="default_buttontext">Restore Default</string>
