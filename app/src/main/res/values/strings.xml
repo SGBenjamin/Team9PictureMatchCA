@@ -19,7 +19,7 @@
     <string name="grid_settings">Images per row: </string>
     <string name="jsoup_settings">Enable Glide library: </string>
     <string name="glide_settings">Enable jsoup library: </string>
-    <string name="helptext">Please select 6 images</string>
+    <string name="reminder_text">Please select 6 images only</string>
 
     <string name="default_matches">0/6 matches</string>
     <string name="default_time">00:00:00</string>
