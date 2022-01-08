@@ -41,6 +41,8 @@
     <string name="playerName">Player's Name</string>
     <string name="timeTaken">Time Taken</string>
 
+    <string name="contentdesc">View of item within each row</string>
+
     <!--new by YJ-->
     <string name="no_match_text">Wrong match</string>
     <string name="select_cards_text">Select 2 cards</string>

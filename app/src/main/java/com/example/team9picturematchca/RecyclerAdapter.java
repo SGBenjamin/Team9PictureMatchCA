@@ -49,21 +49,19 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
-        // row_item layout to be created
-        View view = layoutInflater.inflate(R.layout.row_item, parent, false);
+        View view = layoutInflater.inflate(R.layout.activity_item, parent, false);
         return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerAdapter.ViewHolder holder, int position) {
-        ImageView imageView = holder.imageView; // in row_item layout
-        ImageView checkBox = holder.checkBox; // in row_item layout
+        ImageView imageView = holder.imageView;
+        ImageView checkBox = holder.checkBox;
 
         imageView.setImageBitmap(imgs.get(position));
 
         if(selected.containsKey(position)){
-            // to create a green border in drawable folder
-            imageView.setBackground(ContextCompat.getDrawable(context, R.drawable.green_border));
+            imageView.setBackground(ContextCompat.getDrawable(context, R.drawable.border));
             checkBox.setVisibility(View.VISIBLE);
         } else{
             imageView.setBackground(null);
@@ -83,8 +81,8 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         public ViewHolder(@NonNull View itemView){
             super(itemView);
 
-            imageView = itemView.findViewById(R.id.imageView); // in row_item layout
-            checkBox = itemView.findViewById(R.id.checkBox); // in row_item layout
+            imageView = itemView.findViewById(R.id.imgView);
+            checkBox = itemView.findViewById(R.id.checkBox);
 
             itemView.setOnClickListener(this);
         }
