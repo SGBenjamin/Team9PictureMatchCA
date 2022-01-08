@@ -15,9 +15,9 @@
         <activity
                 android:name=".ImagesActivity"
                 android:exported="true"/>
-        <activity
-                android:name=".ImageAdapter"
-                android:exported="false"/>
+<!--        <activity-->
+<!--                android:name=".ImageAdapter"-->
+<!--                android:exported="false"/>-->
         <activity
                 android:name=".HighScoreActivity"
                 android:exported="false"/>
