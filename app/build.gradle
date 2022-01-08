@@ -37,4 +37,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
     implementation 'com.github.bumptech.glide:glide:4.11.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+
+    // jsoup HTML parser library @ https://jsoup.org/ (not used unless enabled in settings)
+    implementation 'org.jsoup:jsoup:1.13.1'
 }
