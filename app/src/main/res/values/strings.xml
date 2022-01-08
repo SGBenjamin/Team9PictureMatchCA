@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Team9PictureMatchCA</string>
     <string name="Username">Username:</string>
@@ -26,12 +27,20 @@
     <string name="pause_buttontext">Pause</string>
     <string name="paused_text">PAUSED</string>
 
-    <string name="highscore_first">1ST</string>
-    <string name="highscore_second">2ND</string>
-    <string name="highscore_third">3RD</string>
-    <string name="highscore_fourth">4TH</string>
-    <string name="highscore_fifth">5TH</string>
-    <string name = "reset_button">Reset Scores</string>
+    <string name="firstHighScore">1st</string>
+    <string name="secondHighScore">2nd</string>
+    <string name="thirdHighScore">3rd</string>
+    <string name="fourthHighScore">4th</string>
+    <string name="fifthHighScore">5th</string>
+
+    <string name="reset_button">Reset</string>
+    <string name="return_button">Return</string>
+
+    <string name="leaderboard">LEADERBOARD</string>
+    <string name="ranking">Ranking</string>
+    <string name="playerName">Player's Name</string>
+    <string name="timeTaken">Time Taken</string>
+
     <!--new by YJ-->
     <string name="no_match_text">Wrong match</string>
     <string name="select_cards_text">Select 2 cards</string>
@@ -40,6 +49,8 @@
     <string name="highScore_text">Congrats! New highscore! \nReturning to menu...</string>
     <string name="process_images">Starting to process images..</string>
     <string name="download_images">Downloading images..</string>
+
+
 
     <string-array name="fetch_choices">
         <item>All</item>
@@ -73,7 +84,5 @@
         <item>https://www.gratisography.com/</item>
         <item>https://www.reshot.com/</item>
     </string-array>
-
-    <string name="test">test</string>
 
 </resources>

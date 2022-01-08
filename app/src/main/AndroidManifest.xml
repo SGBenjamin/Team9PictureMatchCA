@@ -13,6 +13,9 @@
             android:name=".ImageAdapter"
             android:exported="false" />
         <activity
+            android:name=".HighScoreActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
