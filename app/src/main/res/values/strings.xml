@@ -38,7 +38,7 @@
 
     <string name="leaderboard">LEADERBOARD</string>
     <string name="ranking">Ranking</string>
-    <string name="playerName">Player's Name</string>
+    <string name="playerName">Player\'s Name</string>
     <string name="timeTaken">Time Taken</string>
 
     <string name="contentdesc">View of item within each row</string>
