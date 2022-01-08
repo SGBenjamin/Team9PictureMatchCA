@@ -22,7 +22,7 @@
     <string name="reminder_text">Please select 6 images only</string>
 
     <string name="default_matches">0/6 matches</string>
-    <string name="default_time">00:00:00</string>
+    <string name="default_time">Time:00:00</string>
     <string name="game_welcome">Welcome to the memory game!</string>
     <string name="pause_buttontext">Pause</string>
     <string name="paused_text">PAUSED</string>
