@@ -307,11 +307,9 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
         handler.post(new Runnable() {
             @Override
             public void run() {
-                int hours = timer / 3600;
                 int minutes = (timer % 3600) / 60;
                 int seconds = timer % 60;
-                String time = String.format(Locale.getDefault(), "%02d:%02d:%02d",
-                        hours, minutes, seconds);
+                String time = String.format(Locale.getDefault(), "%d:%02d", minutes, seconds);
                 timerTextView.setText(time);
                 if (timerIsRunning) {
                     timer++;
