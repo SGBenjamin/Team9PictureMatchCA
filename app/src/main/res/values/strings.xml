@@ -38,7 +38,7 @@
 
     <string name="leaderboard">LEADERBOARD</string>
     <string name="ranking">Ranking</string>
-    <string name="playerName">Player\'s Name</string>
+    <string name="playerName">Player's Name</string>
     <string name="timeTaken">Time Taken</string>
 
     <string name="contentdesc">View of item within each row</string>
@@ -52,6 +52,12 @@
     <string name="process_images">Starting to process images..</string>
     <string name="download_images">Downloading images..</string>
     <string name="game_start">Start game</string>
+    <string name="gameover">Game Over</string>
+    <string name="gameoverMsg">You have won the game.\nDo you wish to play again?</string>
+    <string name="highscoreMsg">New highscore!\nDo you wish to play again?</string>
+    <string name="yes">Play again</string>
+    <string name="no">Return to main page</string>
+
 
 
     <string-array name="fetch_choices">

@@ -2,6 +2,7 @@ package com.example.team9picturematchca;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.graphics.drawable.ColorDrawable;
 import android.media.MediaPlayer;
@@ -15,6 +16,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -138,7 +140,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
                                 winGameText();
                             }
 
-                            returnToMainActivityAfterFourSeconds();
+                           // returnToMainActivityAfterFourSeconds();
                         } else {
                             // Game not yet end
                             matchedText();
@@ -335,11 +337,49 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void winGameText() {
-        infoTextView.setText(R.string.winGame_text);
+        //infoTextView.setText(R.string.winGame_text);
+        AlertDialog.Builder dlg = new AlertDialog.Builder(this)
+                .setTitle(getString(R.string.gameover))
+                .setMessage(getString(R.string.gameoverMsg))
+                .setPositiveButton(android.R.string.yes,
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                //TO implement
+                            }
+                        })
+                .setNegativeButton(android.R.string.no,
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                //TO implement
+                            }
+                        })
+                .setIcon(android.R.drawable.ic_popup_reminder);
+        dlg.show();
     }
 
     private void highScoreText() {
-        infoTextView.setText(R.string.highScore_text);
+        //infoTextView.setText(R.string.highScore_text);
+        AlertDialog.Builder dlg = new AlertDialog.Builder(this)
+                .setTitle(getString(R.string.gameover))
+                .setMessage(getString(R.string.highscoreMsg))
+                .setPositiveButton(android.R.string.yes,
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                //TO implement
+                            }
+                        })
+                .setNegativeButton(android.R.string.no,
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                //TO implement
+                            }
+                        })
+                .setIcon(android.R.drawable.ic_popup_reminder);
+        dlg.show();
     }
 
 /*    private void waitToast() {
@@ -347,14 +387,14 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
                 Toast.LENGTH_SHORT).show();
     }*/
 
-    private void returnToMainActivityAfterFourSeconds() {
+/*    private void returnToMainActivityAfterFourSeconds() {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
                 finish();
             }
         }, 4000);
-    }
+    }*/
 
     public void saveArray(List<String> highscoreList) {
         String highscoreString;
