@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.drawable.ColorDrawable;
 import android.media.MediaPlayer;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -13,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -26,7 +28,7 @@ import java.util.Locale;
 
 public class GameActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private ArrayList<GameImage> cardImages;
+    private ArrayList<MatchImage> cardImages;
 
     private int numCardOpened;
     private ImageView firstCard;
@@ -43,6 +45,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
     private boolean gamePaused;
     private int timer;
 
+    private Button pauseBtn;
     private TextView infoTextView;
     private TextView pauseForeground;
     //private String infoText;
@@ -66,7 +69,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
         Button backBtn = findViewById(R.id.backBtn);
         backBtn.setOnClickListener(this);
 
-        Button pauseBtn = findViewById(R.id.pauseBtn);
+        pauseBtn = findViewById(R.id.pauseBtn);
         pauseBtn.setOnClickListener(this);
 
         pauseForeground = findViewById(R.id.pauseForeground);
@@ -76,9 +79,9 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
         mediaPlayers = new ArrayList<>();
 
         RecyclerView gameRecyclerView = findViewById(R.id.gameRecyclerView);
-        cardImages = GameImage.createGameImageList(this);
-        GameImagesAdapter adapter = new GameImagesAdapter(cardImages, sharedPreferences.getString("glide", "No").equals("Yes"));
-        adapter.setOnItemClickListener(new GameImagesAdapter.OnItemClickListener() {
+        cardImages = MatchImage.createMatchImgList(this);
+        ImageAdapter adapter = new ImageAdapter(cardImages, sharedPreferences.getString("glide", "No").equals("Yes"));
+        adapter.setOnItemClickListener(new ImageAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View itemView, int position) {
                 // Start timer on first click
@@ -91,7 +94,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
                 }
 
                 if (gamePaused || flipping || processing ||
-                        itemView.findViewById(R.id.gameImageView).getForeground() == null) {
+                        itemView.findViewById(R.id.gameImageView).getForeground() == null) { // layout game_row_item
                     return;
                 }
 
@@ -102,17 +105,17 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
 
                 if (numCardOpened == 0) {
                     // Clicked on first image
-                    firstCard = itemView.findViewById(R.id.gameImageView);
+                    firstCard = itemView.findViewById(R.id.gameImageView); // layout game_row_item
                     // Reveal image
                     flipCard(firstCard);
-                    firstCardId = cardImages.get(position).getId();
+                    firstCardId = cardImages.get(position).getImagenum();
                     numCardOpened = 1;
                 } else if (numCardOpened == 1) {
                     // Clicked on second image
-                    secondCard = itemView.findViewById(R.id.gameImageView);
+                    secondCard = itemView.findViewById(R.id.gameImageView); // layout game_row_item
                     // Reveal image
                     flipCard(secondCard);
-                    secondCardId = cardImages.get(position).getId();
+                    secondCardId = cardImages.get(position).getImagenum();
                     processing = true;
                     if (firstCardId == secondCardId) {
                         // Images matched
@@ -125,14 +128,14 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
                             //Save high scores
                             if (strHighscores.size() < 5 || timer < convertTime(strHighscores.get(4))) {
                                 // Sound effect for highscore
-                                playSound(R.raw.game_highscore);
+                                playSound(R.raw.game_highscore); // music file
                                 highScoreText();
                                 String score = convertTime(timer);
                                 strHighscores.add(score);
                                 saveArray(strHighscores);
                             } else {
                                 // Sound effect for winning
-                                playSound(R.raw.win_audio);
+                                playSound(R.raw.win_audio); // music file
                                 winGameText();
                             }
 
@@ -358,7 +361,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
 
     public void saveArray(List<String> highscoreList) {
         String highscoreString;
-        SharedPreferences sp = this.getSharedPreferences("HIGHSCORE", Activity.MODE_PRIVATE);
+        SharedPreferences sp = this.getSharedPreferences("highScore", Activity.MODE_PRIVATE);
         SharedPreferences.Editor mEdit1 = sp.edit();
         if (highscoreList != null) {
             highscoreList.sort(Comparator.comparingInt(this::convertTime));
@@ -372,7 +375,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     public List<String> getArray(){
-        SharedPreferences sp = this.getSharedPreferences("HIGHSCORE", Activity.MODE_PRIVATE);
+        SharedPreferences sp = this.getSharedPreferences("highScore", Activity.MODE_PRIVATE);
         String highscoreString = sp.getString("highscoreString","");
         if (highscoreString.equals("")){
             return new ArrayList<>();
