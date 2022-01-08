@@ -4,8 +4,7 @@
     <string name="Username">Username:</string>
     <string name="App_title">Team 9 Matching Game</string>
     <string name="UserId">User ID:</string>
-    
-    <string name="scrolling_text">Welcome to Memory Game! Please enter the website URL to choose pictures.</string>
+
     <string name="url_placeholder">URL</string>
     <string name="fetch_buttontext">Fetch</string>
     <string name="start_buttontext">Start Game</string>
@@ -20,27 +19,27 @@
     <string name="jsoup_settings">Enable Glide library:</string>
     <string name="glide_settings">Enable jsoup library:</string>
     <string name="helptext">Please select 6 images</string>
-    
+
     <string name="default_matches">0/6 matches</string>
-    <string name="default_time">00:00:00</string>
-    <string name="game_welcome">Welcome to the memory game!</string>
+    <string name="default_time">00:00</string>
+    <string name="game_start">Select a pair of cards to start.</string>
     <string name="pause_buttontext">Pause</string>
     <string name="paused_text">PAUSED</string>
-    
+
     <string name="firstHighScore">1st</string>
     <string name="secondHighScore">2nd</string>
     <string name="thirdHighScore">3rd</string>
     <string name="fourthHighScore">4th</string>
     <string name="fifthHighScore">5th</string>
-    
+
     <string name="reset_button">Reset</string>
     <string name="return_button">Return</string>
-    
+
     <string name="leaderboard">LEADERBOARD</string>
     <string name="ranking">Ranking</string>
     <string name="playerName">Player Name</string>
     <string name="timeTaken">Time Taken</string>
-    
+
     <string name="contentdesc">View of item within each row</string>
 
     <!--new by YJ-->
@@ -51,8 +50,8 @@
     <string name="highScore_text">Congrats! New highscore! \nReturning to menu...</string>
     <string name="process_images">Starting to process images..</string>
     <string name="download_images">Downloading images..</string>
-    
-    
+
+
     <string-array name="fetch_choices">
         <item>All</item>
         <item>6</item>
@@ -60,24 +59,24 @@
         <item>24</item>
         <item>48</item>
     </string-array>
-    
+
     <string-array name="grid_choices">
         <item>3</item>
         <item>1</item>
         <item>2</item>
         <item>4</item>
     </string-array>
-    
+
     <string-array name="glide_choices">
         <item>No</item>
         <item>Yes</item>
     </string-array>
-    
+
     <string-array name="jsoup_choices">
         <item>No</item>
         <item>Yes</item>
     </string-array>
-    
+
     <string-array name="suggested_urls">
         <item>https://freestocks.org</item>
         <item>https://picography.co</item>

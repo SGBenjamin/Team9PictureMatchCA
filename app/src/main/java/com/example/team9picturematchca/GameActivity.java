@@ -97,9 +97,8 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
                         itemView.findViewById(R.id.imageView).getForeground() == null) { // layout game_row_item
                     return;
                 }
-
                 if (wrongImagePairIsStillOpen) {
-                    waitToast();
+                    //waitToast();
                     return;
                 }
 
@@ -343,10 +342,10 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
         infoTextView.setText(R.string.highScore_text);
     }
 
-    private void waitToast() {
+/*    private void waitToast() {
         Toast.makeText(this, "Please wait for wrong image pair to close.",
                 Toast.LENGTH_SHORT).show();
-    }
+    }*/
 
     private void returnToMainActivityAfterFourSeconds() {
         new Handler().postDelayed(new Runnable() {
