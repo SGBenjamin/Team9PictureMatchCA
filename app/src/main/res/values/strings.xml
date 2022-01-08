@@ -56,8 +56,7 @@
     <string name="gameoverMsg">You have won the game.\nDo you wish to play again?</string>
     <string name="highscoreMsg">New highscore!\nDo you wish to play again?</string>
     <string name="yes">Play again</string>
-    <string name="no">Return to main page</string>
-
+    <string name="no">Return to main </string>
 
 
     <string-array name="fetch_choices">

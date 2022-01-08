@@ -3,6 +3,7 @@ package com.example.team9picturematchca;
 import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.drawable.ColorDrawable;
 import android.media.MediaPlayer;
@@ -341,18 +342,18 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
         AlertDialog.Builder dlg = new AlertDialog.Builder(this)
                 .setTitle(getString(R.string.gameover))
                 .setMessage(getString(R.string.gameoverMsg))
-                .setPositiveButton(android.R.string.yes,
+                .setPositiveButton(R.string.yes,
                         new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
-                                //TO implement
+                                startActivity(new Intent(getBaseContext(), GameActivity.class));
                             }
                         })
-                .setNegativeButton(android.R.string.no,
+                .setNegativeButton(R.string.no,
                         new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
-                                //TO implement
+                                startActivity(new Intent(getBaseContext(), MainActivity.class));
                             }
                         })
                 .setIcon(android.R.drawable.ic_popup_reminder);
@@ -364,18 +365,18 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
         AlertDialog.Builder dlg = new AlertDialog.Builder(this)
                 .setTitle(getString(R.string.gameover))
                 .setMessage(getString(R.string.highscoreMsg))
-                .setPositiveButton(android.R.string.yes,
+                .setPositiveButton(R.string.yes,
                         new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
-                                //TO implement
+                                startActivity(new Intent(getBaseContext(), GameActivity.class));
                             }
                         })
-                .setNegativeButton(android.R.string.no,
+                .setNegativeButton(R.string.no,
                         new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
-                                //TO implement
+                                startActivity(new Intent(getBaseContext(), MainActivity.class));
                             }
                         })
                 .setIcon(android.R.drawable.ic_popup_reminder);
