@@ -74,4 +74,6 @@
         <item>https://www.reshot.com/</item>
     </string-array>
 
+    <string name="test">test</string>
+
 </resources>
