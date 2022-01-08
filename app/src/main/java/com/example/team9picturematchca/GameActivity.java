@@ -43,7 +43,6 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
     private boolean gamePaused;
     private int timer;
 
-    private Button pauseBtn;
     private TextView infoTextView;
     private TextView pauseForeground;
     //private String infoText;
@@ -67,7 +66,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
         Button backBtn = findViewById(R.id.backBtn);
         backBtn.setOnClickListener(this);
 
-        pauseBtn = findViewById(R.id.pauseBtn);
+        Button pauseBtn = findViewById(R.id.pauseBtn);
         pauseBtn.setOnClickListener(this);
 
         pauseForeground = findViewById(R.id.pauseForeground);
