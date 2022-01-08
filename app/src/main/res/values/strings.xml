@@ -51,6 +51,12 @@
     <string name="highScore_text">Congrats! New highscore! \nReturning to menu...</string>
     <string name="process_images">Starting to process images..</string>
     <string name="download_images">Downloading images..</string>
+    <string name="game_start">Start game</string>
+    <string name="gameover">Game Over</string>
+    <string name="gameoverMsg">You have won the game.\nDo you wish to play again?</string>
+    <string name="highscoreMsg">New highscore!\nDo you wish to play again?</string>
+    <string name="yes">Play again</string>
+    <string name="no">Return to main page</string>
 
 
 
