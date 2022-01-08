@@ -82,8 +82,9 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ViewHolder> 
             imageView.setImageBitmap(bitmap);
         }
     }
+
     @Override
-    public int getImageCount(){
+    public int getItemCount(){
         return matchImages.size();
     }
 

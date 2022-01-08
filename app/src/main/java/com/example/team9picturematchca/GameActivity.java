@@ -80,7 +80,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
 
         RecyclerView gameRecyclerView = findViewById(R.id.gameRecyclerView);
         cardImages = MatchImage.createMatchImgList(this);
-        ImageAdapter adapter = new ImageAdapter(cardImages, sharedPreferences.getString("glide", "No").equals("Yes"));
+        ImageAdapter adapter = new ImageAdapter( sharedPreferences.getString("glide", "No").equals("Yes"), cardImages);
         adapter.setOnItemClickListener(new ImageAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View itemView, int position) {
