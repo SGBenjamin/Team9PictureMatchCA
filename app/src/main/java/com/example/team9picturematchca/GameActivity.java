@@ -128,14 +128,14 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
                             //Save high scores
                             if (strHighscores.size() < 5 || timer < convertTime(strHighscores.get(4))) {
                                 // Sound effect for highscore
-                                playSound(R.raw.game_highscore); // music file
+                                // playSound(R.raw.game_highscore);
                                 highScoreText();
                                 String score = convertTime(timer);
                                 strHighscores.add(score);
                                 saveArray(strHighscores);
                             } else {
                                 // Sound effect for winning
-                                playSound(R.raw.win_audio); // music file
+                                // playSound(R.raw.win_audio);
                                 winGameText();
                             }
 
@@ -144,14 +144,14 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
                             // Game not yet end
                             matchedText();
                             // Sound effect for matching
-                            playSound(R.raw.success_bell2);
+                            // playSound(R.raw.success_bell2);
                         }
                     } else {
                         // Images did not match
                         wrongImagePairIsStillOpen = true;
                         didNotMatchText();
                         // Sound effect for wrong match
-                        playSound(R.raw.failure_beep);
+                        // playSound(R.raw.failure_beep);
                         closeBothImagesAfterTwoSeconds();
                     }
                     processing = false;
@@ -265,7 +265,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
 
     public void pauseGame() {
         gamePaused = true;
-        playSound(R.raw.game_pause);
+        // playSound(R.raw.game_pause);
         pauseForeground.setVisibility(View.VISIBLE);
         pauseBtn.setText("Resume");
         stopTimer();
@@ -274,7 +274,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
     public void resumeGame() {
         gamePaused = false;
         timerIsRunning = true;
-        playSound(R.raw.game_resume);
+        // playSound(R.raw.game_resume);
         pauseForeground.setVisibility(View.INVISIBLE);
         pauseBtn.setText("Pause");
         startTimer();
