@@ -47,9 +47,9 @@
         android:id="@+id/textInputEditText"
         android:layout_width="280dp"
         android:layout_height="50dp"
-        android:layout_marginStart="16dp"
         android:hint="@string/url_placeholder"
-        app:layout_constraintEnd_toStartOf="@+id/fetchButton"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/scrollText" />
@@ -82,8 +82,8 @@
         android:text="@string/fetchBtn_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/textInputEditText"
-        app:layout_constraintTop_toBottomOf="@+id/scrollText" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputEditText" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
@@ -102,11 +102,11 @@
         android:id="@+id/helpText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
         android:text="@string/reminder_text"
         android:visibility="invisible"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputEditText" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerView" />
 
 <!--    <ImageView-->
 <!--        android:id="@+id/imageView2"-->
