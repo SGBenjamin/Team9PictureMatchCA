@@ -10,6 +10,7 @@ import android.os.Bundle;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     Button downloadImgBtn;
+    Button soloMatch12;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +20,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         downloadImgBtn = findViewById(R.id.dlImages);
         downloadImgBtn.setOnClickListener(this);
+
+        soloMatch12 = findViewById(R.id.soloMatch12);
+        soloMatch12.setOnClickListener(this);
     }
 
 
@@ -26,7 +30,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
         int buttonId = view.getId();
-        if(buttonId == R.id.dlImages){
+        if(buttonId == R.id.dlImages || buttonId == R.id.soloMatch12){
             Intent intent = new Intent(getApplicationContext(), ImagesActivity.class);
             startActivity(intent);
         }
