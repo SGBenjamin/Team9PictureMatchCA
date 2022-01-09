@@ -2,6 +2,7 @@ package com.example.team9picturematchca;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.PorterDuff;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Handler;
 
@@ -114,10 +115,14 @@ public class MultiplayerActivity extends AppCompatActivity
                         if(turn ==1 ) {
                             p1Score++;
                             playSound(R.raw.matched);
+                            firstCard.setColorFilter(0Xff00ff00, PorterDuff.Mode.MULTIPLY );
+                            secondCard.setColorFilter(0xff00ff00, PorterDuff.Mode.MULTIPLY );
                             tv_p1.setText("P1: " + p1Score);
                         } else if (turn ==2) {
                             p2Score++;
                             playSound(R.raw.matched);
+                            firstCard.setColorFilter( 0xff0000ff, PorterDuff.Mode.MULTIPLY );
+                            secondCard.setColorFilter( 0xff0000ff, PorterDuff.Mode.MULTIPLY );
                             tv_p2.setText("P2: "+ p2Score);
                         }
 
@@ -125,7 +130,6 @@ public class MultiplayerActivity extends AppCompatActivity
                         maxScore = cardImages.size()/ 2;
                         if (score == maxScore) {
                             pauseBtn.setEnabled(false);
-                            playSound(R.raw.win);
                             winGameText();
                         }
 
@@ -313,10 +317,10 @@ public class MultiplayerActivity extends AppCompatActivity
     private void setPlayerColour (TextView tv_p1, TextView tv_p2, int turn) {
         if(turn == 2){
             tv_p1.setTextColor(Color.GRAY);
-            tv_p2.setTextColor(Color.BLACK);
+            tv_p2.setTextColor(0xff0000ff);
         } else if (turn == 1) {
             tv_p2.setTextColor(Color.GRAY);
-            tv_p1.setTextColor(Color.BLACK);
+            tv_p1.setTextColor(0xff00ff00);
         }
     }
 
