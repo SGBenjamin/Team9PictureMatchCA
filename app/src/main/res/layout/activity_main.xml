@@ -66,11 +66,12 @@
 
     <Button
         android:id="@+id/highscoreBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="300dp"
+        android:layout_height="75sp"
         android:text="@string/leaderboard"
-        tools:layout_editor_absoluteX="29dp"
-        tools:layout_editor_absoluteY="475dp"
+        android:textAllCaps="true"
+        android:textSize="25sp"
+        rad
         app:layout_constraintBottom_toTopOf="@id/soloMatch"
         android:layout_marginBottom="30dp"
         app:layout_constraintLeft_toLeftOf="parent"
