@@ -35,6 +35,7 @@
 
     <string name="reset_button">Reset</string>
     <string name="return_button">Return</string>
+    <string name="highscore_button">Leaderboard</string>
 
     <string name="leaderboard">LEADERBOARD</string>
     <string name="ranking">Ranking</string>
