@@ -36,8 +36,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
         int buttonId = view.getId();
-        if(buttonId == R.id.soloMatch || buttonId == R.id.multiMatch){
+        if(buttonId == R.id.soloMatch ){
             Intent intent = new Intent(getApplicationContext(), ImagesActivity.class);
+            intent.putExtra("gamemode" , "sole");
+            startActivity(intent);
+        }else if(buttonId == R.id.multiMatch){
+            Intent intent = new Intent(getApplicationContext(), ImagesActivity.class);
+            intent.putExtra("gamemode" , "multi");
             startActivity(intent);
         }
     }

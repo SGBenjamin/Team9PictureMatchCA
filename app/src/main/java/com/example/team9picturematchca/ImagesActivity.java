@@ -46,12 +46,17 @@ public class ImagesActivity extends AppCompatActivity implements View.OnClickLis
     Button startButton;
     Button fetchButton;
     Handler Handler = new Handler();
+    String gamemode;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_images);
 
+        Intent intent = getIntent();
+        String gamemode = intent.getStringExtra("gamemode");
+        System.out.println("gamemode: " + gamemode);
+        this.gamemode = gamemode;
 
         recyclerView = findViewById(R.id.recyclerView);
         recyclerAdapter = new RecyclerAdapter(this);
@@ -73,7 +78,6 @@ public class ImagesActivity extends AppCompatActivity implements View.OnClickLis
         startButton = findViewById(R.id.startButton);
         startButton.setOnClickListener(this);
     }
-
 
     @Override
     protected void onStart() {
@@ -371,11 +375,19 @@ public class ImagesActivity extends AppCompatActivity implements View.OnClickLis
                 public void run() {
                     progressBar.setVisibility(View.INVISIBLE);
                     textView.setVisibility(View.INVISIBLE);
-
-                    if (success) {
-                        Intent intent = new Intent(getApplicationContext(), GameActivity.class);
-                        startActivity(intent);
-                    } else {
+                    System.out.println("con gamemode:" + gamemode);
+                    if (success ) {
+                        if( gamemode.equals("sole")){
+                            System.out.println("con gamemode:" + gamemode + "success");
+                            Intent intent = new Intent(getApplicationContext(), GameActivity.class);
+                            startActivity(intent);
+                        }else if( gamemode.equals("multi") ){
+                            System.out.println("con gamemode:" + gamemode + "success");
+                            Intent intent = new Intent(getApplicationContext(), MultiplayerActivity.class);
+                            startActivity(intent);
+                        }
+                    }
+                    else {
                         startButton.setVisibility(View.VISIBLE);
                         fetchButton.setEnabled(true);
                         Toast.makeText(getApplicationContext(), "Downloading of images failed, please try again", Toast.LENGTH_SHORT).show();
