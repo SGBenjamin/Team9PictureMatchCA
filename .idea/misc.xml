@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../../../../layout/custom_preview.xml" value="0.27291666666666664" />
         <entry key="..\:/GDIPSA/Mobile Development/Team9PictureMatchCA/app/src/main/res/drawable/border.xml" value="0.41041666666666665" />
         <entry key="..\:/GDIPSA/Mobile Development/Team9PictureMatchCA/app/src/main/res/drawable/cicle.xml" value="0.346875" />
         <entry key="..\:/GDIPSA/Mobile Development/Team9PictureMatchCA/app/src/main/res/layout/activity_game.xml" value="0.5541666666666667" />
@@ -10,6 +11,7 @@
         <entry key="..\:/GDIPSA/Mobile Development/Team9PictureMatchCA/app/src/main/res/layout/activity_item.xml" value="0.39427083333333335" />
         <entry key="..\:/GDIPSA/Mobile Development/Team9PictureMatchCA/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/GDIPSA/Mobile Development/Team9PictureMatchCA/app/src/main/res/layout/styles.xml" value="0.5401041666666667" />
+        <entry key="app/src/main/res/layout/activity_multiplayer.xml" value="0.23854166666666668" />
       </map>
     </option>
   </component>
