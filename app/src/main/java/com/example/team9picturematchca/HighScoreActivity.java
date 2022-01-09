@@ -22,7 +22,6 @@ import java.util.Locale;
 public class HighScoreActivity extends AppCompatActivity {
 
     List<String> arrHighScore = new ArrayList<>();
-    List<String> arrPlayersNames = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,21 +41,6 @@ public class HighScoreActivity extends AppCompatActivity {
             highscores[i].setText(arrHighScore.get(i));
         }
 
-/*        TextView player1st = (TextView) findViewById(R.id.player1st);
-        TextView player2nd = (TextView) findViewById(R.id.player2nd);
-        TextView player3rd = (TextView) findViewById(R.id.player3rd);
-        TextView player4th = (TextView) findViewById(R.id.player4th);
-        TextView player5th = (TextView) findViewById(R.id.player5th);
-
-        TextView[] players = {player1st, player2nd, player3rd, player4th, player5th};
-        arrPlayersNames = getPlayersArray();
-        String test = "blank";
-
-        for (int j = 0; j < arrPlayersNames.size(); j++) {
-            players[j].setText(test);
-        }*/
-        // commenting out for now
-
         Button resetBtn = findViewById(R.id.resetButton);
         resetBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -74,8 +58,7 @@ public class HighScoreActivity extends AppCompatActivity {
         returnBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Intent.ACTION_MAIN);
-                intent.addCategory(Intent.CATEGORY_HOME);
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
             }
         });

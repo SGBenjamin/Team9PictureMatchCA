@@ -11,6 +11,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     Button multiMatch;
     Button soloMatch;
+    Button highScores;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,8 +28,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         multiMatch = findViewById(R.id.multiMatch);
         multiMatch.setOnClickListener(this);
 
-
-
+        highScores = findViewById(R.id.highscoreBtn);
+        highScores.setOnClickListener(this);
     }
 
 
@@ -36,14 +37,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
         int buttonId = view.getId();
-        Intent intent = new Intent(getApplicationContext(), ImagesActivity.class);
 
         if(buttonId == R.id.soloMatch ){
+            Intent intent = new Intent(getApplicationContext(), ImagesActivity.class);
             intent.putExtra("gamemode" , "sole");
+            startActivity(intent);
         }else if(buttonId == R.id.multiMatch){
+            Intent intent = new Intent(getApplicationContext(), ImagesActivity.class);
             intent.putExtra("gamemode" , "multi");
+            startActivity(intent);
+        } else if (buttonId == R.id.highscoreBtn){
+            Intent intent = new Intent(getApplicationContext(), HighScoreActivity.class);
+            startActivity(intent);
         }
-
-        startActivity(intent);
     }
 }
