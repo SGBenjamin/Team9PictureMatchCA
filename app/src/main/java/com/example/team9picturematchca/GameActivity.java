@@ -130,7 +130,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
                             //Save high scores
                             if (strHighscores.size() < 5 || timer < convertTime(strHighscores.get(4))) {
                                 // Sound effect for highscore
-                                // playSound(R.raw.game_highscore);
+                                playSound(R.raw.win);
                                 highScoreText();
                                 String score = convertTime(timer);
                                 strHighscores.add(score);
