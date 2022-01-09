@@ -9,8 +9,8 @@ import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    Button downloadImgBtn;
-    Button soloMatch12;
+    Button multiMatch;
+    Button soloMatch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,11 +18,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
 
-        downloadImgBtn = findViewById(R.id.dlImages);
-        downloadImgBtn.setOnClickListener(this);
+       //downloadImgBtn = findViewById(R.id.dlImages);
+        //downloadImgBtn.setOnClickListener(this);
 
-        soloMatch12 = findViewById(R.id.soloMatch12);
-        soloMatch12.setOnClickListener(this);
+        soloMatch = findViewById(R.id.soloMatch);
+        soloMatch.setOnClickListener(this);
+
+        multiMatch = findViewById(R.id.multiMatch);
+        multiMatch.setOnClickListener(this);
+
+
+
     }
 
 
@@ -30,7 +36,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
         int buttonId = view.getId();
-        if(buttonId == R.id.dlImages || buttonId == R.id.soloMatch12){
+        if(buttonId == R.id.soloMatch || buttonId == R.id.multiMatch){
             Intent intent = new Intent(getApplicationContext(), ImagesActivity.class);
             startActivity(intent);
         }

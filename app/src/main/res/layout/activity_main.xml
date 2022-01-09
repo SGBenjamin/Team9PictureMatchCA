@@ -14,7 +14,7 @@
         android:contentDescription="splashImage"
         android:src="@drawable/cards"
         app:flow_horizontalBias="0.0"
-        app:layout_constraintBottom_toTopOf="@id/soloMatch12"
+        app:layout_constraintBottom_toTopOf="@id/soloMatch"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
@@ -35,7 +35,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/soloMatch12"
+        android:id="@+id/soloMatch"
         android:layout_width="175dp"
         android:layout_height="200dp"
         android:layout_marginLeft="20dp"
@@ -50,7 +50,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/multiMatch12"
+        android:id="@+id/multiMatch"
         android:layout_width="175dp"
         android:layout_height="200dp"
         android:backgroundTint="@color/teal_700"
@@ -60,7 +60,7 @@
         app:layout_constraintHorizontal_bias="0"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        app:layout_constraintLeft_toRightOf="@id/soloMatch12"
+        app:layout_constraintLeft_toRightOf="@id/soloMatch"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
 
