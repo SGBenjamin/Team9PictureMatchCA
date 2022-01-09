@@ -153,7 +153,16 @@ public class ImagesActivity extends AppCompatActivity implements View.OnClickLis
         private ArrayList<String> images;
 
         public DownLoadImagesTask(String url) {
+            url = checkURL(url);
             this.url = url;
+        }
+
+        public String checkURL (String url) {
+            if (!url.contains("https")) {
+                url = "https://" + url;
+            }
+
+            return url;
         }
 
         @Override
