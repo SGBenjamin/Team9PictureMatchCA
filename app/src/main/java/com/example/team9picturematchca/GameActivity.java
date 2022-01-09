@@ -137,7 +137,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
                                 saveArray(strHighscores);
                             } else {
                                 // Sound effect for winning
-                                // playSound(R.raw.win_audio);
+                                playSound(R.raw.win);
                                 winGameText();
                             }
 
@@ -146,14 +146,14 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
                             // Game not yet end
                             matchedText();
                             // Sound effect for matching
-                            // playSound(R.raw.success_bell2);
+                            playSound(R.raw.matched);
                         }
                     } else {
                         // Images did not match
                         wrongImagePairIsStillOpen = true;
                         didNotMatchText();
                         // Sound effect for wrong match
-                        // playSound(R.raw.failure_beep);
+                        playSound(R.raw.notmatched);
                         closeBothImagesAfterTwoSeconds();
                     }
                     processing = false;
