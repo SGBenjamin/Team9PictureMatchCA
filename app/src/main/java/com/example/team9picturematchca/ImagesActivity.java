@@ -228,7 +228,7 @@ public class ImagesActivity extends AppCompatActivity implements View.OnClickLis
                         bmp = Glide.with(getApplicationContext())
                                 .asBitmap()
                                 .load(url)
-                                .override(100,100)
+                                .override(75,75)
                                 .centerCrop()
                                 .submit()
                                 .get();
