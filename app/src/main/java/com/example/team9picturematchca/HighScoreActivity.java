@@ -55,6 +55,7 @@ public class HighScoreActivity extends AppCompatActivity {
         for (int j = 0; j < arrPlayersNames.size(); j++) {
             players[j].setText(test);
         }*/
+        // commenting out for now
 
         Button resetBtn = findViewById(R.id.resetButton);
         resetBtn.setOnClickListener(new View.OnClickListener() {

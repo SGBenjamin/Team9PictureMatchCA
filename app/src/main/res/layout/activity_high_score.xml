@@ -43,6 +43,7 @@
         app:layout_constraintTop_toBottomOf="@id/leaderboardLabel"
         tools:layout_editor_absoluteX="161dp"
         tools:layout_editor_absoluteY="78dp" />-->
+    <!-- commenting out -->
 
     <TextView
         android:id="@+id/timing"
