@@ -164,9 +164,9 @@ public class MultiplayerActivity extends AppCompatActivity
     public void onClick(View v) {
         int id = v.getId();
 
-        if(id == R.id.backBtn){
+        if(id == R.id.multibackBtn){
             finish();
-        } else if (id == R.id.pauseBtn) {
+        } else if (id == R.id.multipauseBtn) {
             if(gamePaused) {
                 resumeGame();
             } else {
@@ -272,7 +272,7 @@ public class MultiplayerActivity extends AppCompatActivity
 
     public void resumeGame() {
         gamePaused = false;
-        timerIsRunning = true;
+        // timerIsRunning = true;
         // playSound(R.raw.game_resume);
         pauseForeground.setVisibility(View.INVISIBLE);
         pauseBtn.setText("Pause");
