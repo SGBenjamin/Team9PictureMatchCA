@@ -79,12 +79,12 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ViewHolder> 
 //        options.centerCrop();
 //
 //        if (useGlide) {
-//            Glide.with(imageView
-//                    .getContext())
-//                    .load(matchImage.getImgPath())//this is where the URL will be accessed from
-//                    .override(125,125)
-//                    .centerCrop()
-//                    .into(imageView);
+               Glide.with(imageView
+                      .getContext())
+                       .load(matchImage.getImgPath())//this is where the URL will be accessed from
+                       .override(125,125)
+                       .centerCrop()
+                       .into(imageView);
 //        } else {
 //            Bitmap bitmap = BitmapFactory.decodeFile(matchImage.getImgPath());
 //            imageView.setImageBitmap(bitmap);
