@@ -18,6 +18,8 @@ import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
+import com.bumptech.glide.request.RequestOptions;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -223,7 +225,13 @@ public class ImagesActivity extends AppCompatActivity implements View.OnClickLis
                 public void run() {
                     try {
                         Bitmap bmp;
-                        bmp = Glide.with(getApplicationContext()).asBitmap().load(url).submit().get();
+                        bmp = Glide.with(getApplicationContext())
+                                .asBitmap()
+                                .load(url)
+                                .override(100,100)
+                                .centerCrop()
+                                .submit()
+                                .get();
                         Handler.post(new Runnable() {
                             @Override
                             public void run() {

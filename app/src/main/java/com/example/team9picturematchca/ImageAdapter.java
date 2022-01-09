@@ -12,6 +12,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.bitmap.FitCenter;
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
+import com.bumptech.glide.request.RequestOptions;
 
 import java.util.List;
 
@@ -72,15 +75,20 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ViewHolder> 
         ImageView imageView = viewHolder.imageView;
         // Get element from your dataset at this position and replace the
         // contents of the view with that element
-        if (useGlide) {
-            Glide.with(imageView
-                    .getContext())
-                    .load(matchImage.getImgPath())//this is where the URL will be accessed from
-                    .into(imageView);
-        } else {
-            Bitmap bitmap = BitmapFactory.decodeFile(matchImage.getImgPath());
-            imageView.setImageBitmap(bitmap);
-        }
+//        RequestOptions options = new RequestOptions();
+//        options.centerCrop();
+//
+//        if (useGlide) {
+//            Glide.with(imageView
+//                    .getContext())
+//                    .load(matchImage.getImgPath())//this is where the URL will be accessed from
+//                    .override(125,125)
+//                    .centerCrop()
+//                    .into(imageView);
+//        } else {
+//            Bitmap bitmap = BitmapFactory.decodeFile(matchImage.getImgPath());
+//            imageView.setImageBitmap(bitmap);
+//        }
     }
 
     @Override
