@@ -22,10 +22,11 @@
 
     <TextView
         android:id="@+id/ranking"
-        android:layout_width="wrap_content"
+        android:layout_width="75sp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="28dp"
+        android:textAllCaps="true"
         android:text="@string/ranking"
         android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -50,8 +51,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
-        android:layout_marginEnd="30dp"
+        android:layout_marginEnd="20sp"
         android:text="@string/timeTaken"
+        android:textAllCaps="true"
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/ranking"
@@ -59,40 +61,40 @@
 
     <TextView
         android:id="@+id/rank1st"
-        android:layout_width="wrap_content"
+        android:layout_width="75sp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="28dp"
         android:text="@string/firstHighScore"
-        android:textSize="25sp"
+        android:textSize="40sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ranking" />
 
     <TextView
         android:id="@+id/rank2nd"
-        android:layout_width="wrap_content"
+        android:layout_width="75sp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="28dp"
         android:text="@string/secondHighScore"
-        android:textSize="20sp"
+        android:textSize="35sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/rank1st" />
 
     <TextView
         android:id="@+id/rank3rd"
-        android:layout_width="wrap_content"
+        android:layout_width="75sp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="28dp"
         android:text="@string/thirdHighScore"
-        android:textSize="20sp"
+        android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/rank2nd" />
 
     <TextView
         android:id="@+id/rank4th"
-        android:layout_width="wrap_content"
+        android:layout_width="75sp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="28dp"
@@ -103,7 +105,7 @@
 
     <TextView
         android:id="@+id/rank5th"
-        android:layout_width="wrap_content"
+        android:layout_width="75sp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="28dp"
@@ -116,12 +118,12 @@
         android:id="@+id/highscore1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="87dp"
-        android:textSize="25sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/timing"
-        app:layout_constraintStart_toStartOf="@+id/timing"
+        android:layout_marginTop="32dp"
+        android:layout_marginRight="30dp"
+        android:textSize="40sp"
+        app:layout_constraintHorizontal_bias="0.55"
+        app:layout_constraintLeft_toRightOf="@id/rank1st"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/timing" />
 
     <TextView
@@ -129,21 +131,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
-        android:layout_marginEnd="87dp"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/rank2nd"
-        app:layout_constraintTop_toBottomOf="@id/highscore1" />
+        android:layout_marginEnd="30dp"
+        android:textSize="35sp"
+        app:layout_constraintHorizontal_bias="0.55"
+        app:layout_constraintLeft_toRightOf="@id/rank2nd"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/highscore1"
+        />
 
     <TextView
         android:id="@+id/highscore3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
-        android:layout_marginEnd="87dp"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/rank3rd"
+        android:layout_marginEnd="30dp"
+        android:textSize="30sp"
+        app:layout_constraintHorizontal_bias="0.55"
+        app:layout_constraintLeft_toRightOf="@id/rank3rd"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/highscore2" />
 
     <TextView
@@ -151,10 +156,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
-        android:layout_marginEnd="87dp"
+        android:layout_marginEnd="30dp"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/rank4th"
+        app:layout_constraintHorizontal_bias="0.55"
+        app:layout_constraintLeft_toRightOf="@id/rank4th"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/highscore3" />
 
     <TextView
@@ -162,10 +168,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
-        android:layout_marginEnd="87dp"
+        android:layout_marginEnd="30dp"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/rank5th"
+        app:layout_constraintHorizontal_bias="0.55"
+        app:layout_constraintLeft_toRightOf="@id/rank5th"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/highscore4" />
 
     <Button

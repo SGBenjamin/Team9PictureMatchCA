@@ -70,7 +70,12 @@
         android:layout_height="wrap_content"
         android:text="@string/leaderboard"
         tools:layout_editor_absoluteX="29dp"
-        tools:layout_editor_absoluteY="475dp" />
+        tools:layout_editor_absoluteY="475dp"
+        app:layout_constraintBottom_toTopOf="@id/soloMatch"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent
+"/>
 
     <!-- pushing -->
 
