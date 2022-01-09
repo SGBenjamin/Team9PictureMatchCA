@@ -340,7 +340,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
     private void winGameText() {
         //infoTextView.setText(R.string.winGame_text);
         AlertDialog.Builder dlg = new AlertDialog.Builder(this)
-                .setTitle(getString(R.string.gameover))
+                .setTitle(getString(R.string.gameover)+ " Score: "+convertTime(timer))
                 .setMessage(getString(R.string.gameoverMsg))
                 .setPositiveButton(R.string.yes,
                         new DialogInterface.OnClickListener() {
@@ -363,7 +363,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
     private void highScoreText() {
         //infoTextView.setText(R.string.highScore_text);
         AlertDialog.Builder dlg = new AlertDialog.Builder(this)
-                .setTitle(getString(R.string.gameover))
+                .setTitle(getString(R.string.gameover) + " Score: " +convertTime(timer))
                 .setMessage(getString(R.string.highscoreMsg))
                 .setPositiveButton(R.string.yes,
                         new DialogInterface.OnClickListener() {
@@ -426,18 +426,18 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     public String convertTime(Integer intTime){
-        int hours = intTime / 3600;
+       // int hours = intTime / 3600;
         int minutes = (intTime % 3600) / 60;
         int seconds = intTime % 60;
-        return String.format(Locale.getDefault(), "%02d:%02d:%02d",
-                hours, minutes, seconds);
+        return String.format(Locale.getDefault(), "%02d:%02d",
+                minutes, seconds);
     }
 
     public int convertTime(String strTime) {
         String[] timeUnits = strTime.split(":");
-        int hours = Integer.parseInt(timeUnits[0]) * 60 * 60;
-        int minutes = Integer.parseInt(timeUnits[1]) * 60;
-        int seconds = Integer.parseInt(timeUnits[2]);
-        return hours + minutes + seconds;
+        //int hours = Integer.parseInt(timeUnits[0]) * 60 * 60;
+        int minutes = Integer.parseInt(timeUnits[0]) * 60;
+        int seconds = Integer.parseInt(timeUnits[1]);
+        return minutes + seconds;
     }
 }
