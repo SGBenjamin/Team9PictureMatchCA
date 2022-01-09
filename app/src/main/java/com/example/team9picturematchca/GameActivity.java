@@ -282,7 +282,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
         startTimer();
     }
 
-    private void closeBothImagesAfterTwoSeconds() {
+    protected void closeBothImagesAfterTwoSeconds() {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -321,19 +321,19 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
         });
     }
 
-    private void stopTimer() {
+    protected void stopTimer() {
         timerIsRunning = false;
     }
 
-    private void didNotMatchText() {
+    protected void didNotMatchText() {
         infoTextView.setText(R.string.no_match_text);
     }
 
-    private void selectImageText() {
+    protected void selectImageText() {
         infoTextView.setText(R.string.select_cards_text);
     }
 
-    private void matchedText() {
+    protected void matchedText() {
         infoTextView.setText(R.string.cards_matched_text);
     }
 
