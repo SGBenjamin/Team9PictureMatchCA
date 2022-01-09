@@ -79,7 +79,6 @@ public class MultiplayerActivity extends AppCompatActivity
                     return;
                 }
                 if (wrongImagePairIsStillOpen) {
-                    //waitToast();
                     return;
                 }
 
@@ -98,7 +97,7 @@ public class MultiplayerActivity extends AppCompatActivity
                     secondCardId = cardImages.get(position).getImagenum();
                     processing = true;
 
-                    if (firstCardId == secondCardId) {
+                    if (firstCardId == secondCardId && turn == 1) {
                         // Images matched, add points to p1
                         if(turn ==1 ) {
                             p1Score++;
