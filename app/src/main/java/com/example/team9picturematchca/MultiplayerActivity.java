@@ -103,7 +103,7 @@ public class MultiplayerActivity extends AppCompatActivity
                     secondCardId = cardImages.get(position).getImagenum();
                     processing = true;
 
-                    if (firstCardId == secondCardId && turn == 1) {
+                    if (firstCardId == secondCardId) {
                         // Images matched, add points to p1
                         if(turn ==1 ) {
                             p1Score++;
@@ -115,7 +115,17 @@ public class MultiplayerActivity extends AppCompatActivity
                             tv_p2.setText("P2: "+ p2Score);
                         }
 
-                        if(turn == 1){
+                        if(turn == 2){
+                            turn = 1;
+                            tv_p1.setTextColor(Color.GRAY);
+                            tv_p2.setTextColor(Color.BLACK);
+                        } else if (turn == 1) {
+                            turn = 1;
+                            tv_p2.setTextColor(Color.GRAY);
+                            tv_p1.setTextColor(Color.BLACK);
+                        }
+                    } else{
+                        if (turn == 1) {
                             turn = 2;
                             tv_p1.setTextColor(Color.GRAY);
                             tv_p2.setTextColor(Color.BLACK);
@@ -124,7 +134,6 @@ public class MultiplayerActivity extends AppCompatActivity
                             tv_p2.setTextColor(Color.GRAY);
                             tv_p1.setTextColor(Color.BLACK);
                         }
-                    } else{
                         wrongImagePairIsStillOpen = true;
                         didNotMatchText();
                         playSound(R.raw.notmatched);
@@ -297,5 +306,6 @@ public class MultiplayerActivity extends AppCompatActivity
             }
         });
     }
+
 }
 
