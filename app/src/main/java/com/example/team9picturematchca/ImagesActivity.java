@@ -54,9 +54,8 @@ public class ImagesActivity extends AppCompatActivity implements View.OnClickLis
         setContentView(R.layout.activity_images);
 
         Intent intent = getIntent();
-        String gamemode = intent.getStringExtra("gamemode");
+        gamemode = intent.getStringExtra("gamemode");
         System.out.println("gamemode: " + gamemode);
-        this.gamemode = gamemode;
 
         recyclerView = findViewById(R.id.recyclerView);
         recyclerAdapter = new RecyclerAdapter(this);
