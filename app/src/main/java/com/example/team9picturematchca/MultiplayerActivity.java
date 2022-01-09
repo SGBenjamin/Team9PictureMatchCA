@@ -125,6 +125,7 @@ public class MultiplayerActivity extends AppCompatActivity
                         maxScore = cardImages.size()/ 2;
                         if (score == maxScore) {
                             pauseBtn.setEnabled(false);
+                            playSound(R.raw.win);
                             winGameText();
                         }
 
