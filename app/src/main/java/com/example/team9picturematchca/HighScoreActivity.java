@@ -38,22 +38,23 @@ public class HighScoreActivity extends AppCompatActivity {
         TextView[] highscores = {highscore1, highscore2, highscore3, highscore4, highscore5};
         arrHighScore = getHSArray();
 
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < arrHighScore.size() ; i++) {
             highscores[i].setText(arrHighScore.get(i));
         }
 
-        TextView player1st = findViewById(R.id.player1st);
-        TextView player2nd = findViewById(R.id.player2nd);
-        TextView player3rd = findViewById(R.id.player3rd);
-        TextView player4th = findViewById(R.id.player4th);
-        TextView player5th = findViewById(R.id.player5th);
+/*        TextView player1st = (TextView) findViewById(R.id.player1st);
+        TextView player2nd = (TextView) findViewById(R.id.player2nd);
+        TextView player3rd = (TextView) findViewById(R.id.player3rd);
+        TextView player4th = (TextView) findViewById(R.id.player4th);
+        TextView player5th = (TextView) findViewById(R.id.player5th);
 
         TextView[] players = {player1st, player2nd, player3rd, player4th, player5th};
         arrPlayersNames = getPlayersArray();
+        String test = "blank";
 
-        for (int j = 0; j < 5; j++) {
-            players[j].setText(arrPlayersNames.get(j));
-        }
+        for (int j = 0; j < arrPlayersNames.size(); j++) {
+            players[j].setText(test);
+        }*/
 
         Button resetBtn = findViewById(R.id.resetButton);
         resetBtn.setOnClickListener(new View.OnClickListener() {
