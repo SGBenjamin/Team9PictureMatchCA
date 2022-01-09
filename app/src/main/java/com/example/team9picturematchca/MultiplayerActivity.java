@@ -276,10 +276,10 @@ public class MultiplayerActivity extends AppCompatActivity
         // playSound(R.raw.game_resume);
         pauseForeground.setVisibility(View.INVISIBLE);
         pauseBtn.setText("Pause");
-        startTimer();
+        // startTimer();
     }
 
-    private void startTimer() {
+   /* private void startTimer() {
         final TextView timerTextView = findViewById(R.id.textTimer);
         final Handler handler = new Handler();
         handler.post(new Runnable() {
@@ -295,7 +295,7 @@ public class MultiplayerActivity extends AppCompatActivity
                 }
             }
         });
-    }
+    }*/
 
     private void setPlayerColour (TextView tv_p1, TextView tv_p2, int turn) {
         if(turn == 2){
