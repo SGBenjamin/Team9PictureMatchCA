@@ -6,28 +6,28 @@
     android:layout_height="wrap_content">
 
     <ImageView
-            android:id="@+id/imgView"
-            android:layout_width="85dp"
-            android:layout_height="85dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="20dp"
-            android:padding="3dp"
-            android:contentDescription="@string/contentdesc"
-            tools:srcCompat="@tools:sample/avatars"
-            tools:ignore="MissingConstraints"
+        android:id="@+id/imgView"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:padding="3dp"
+        android:contentDescription="@string/contentdesc"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:srcCompat="@tools:sample/avatars"
     />
     
     <ImageView
-            android:id="@+id/checkBox"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/imgView"
-            android:layout_alignBottom="@+id/imgView"
-            android:src="@drawable/tickbox"
-            android:background="@drawable/border"
-            android:visibility="invisible"
-            tools:ignore="MissingConstraints"
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/tickbox"
+        android:background="@drawable/border"
+        android:visibility="invisible"
+        app:layout_constraintTop_toTopOf="@id/imgView"
+        app:layout_constraintLeft_toLeftOf="@id/imgView"
     />
 
     
