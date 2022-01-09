@@ -41,7 +41,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/startBtn_Orange"/>
 <!--    android:backgroundTint="@color/startBtn_Orange"-->
 
     <AutoCompleteTextView
@@ -67,7 +68,7 @@
         android:singleLine="true"
         android:text="@string/scrollingTtl_text"
         android:textColor="#000000"
-        android:textSize="25sp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
