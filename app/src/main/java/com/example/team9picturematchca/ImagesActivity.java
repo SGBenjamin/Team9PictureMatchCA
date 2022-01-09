@@ -159,7 +159,11 @@ public class ImagesActivity extends AppCompatActivity implements View.OnClickLis
 
         public String checkURL (String url) {
             if (!url.contains("https")) {
-                url = "https://" + url;
+                if (url.contains("http")) {
+                    url = url.replace("http", "https");
+                } else {
+                    url = "https://" + url;
+                }
             }
 
             return url;
