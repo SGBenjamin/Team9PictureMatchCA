@@ -50,6 +50,9 @@ public class MultiplayerActivity extends AppCompatActivity
         backBtn = findViewById(R.id.backBtn);
         backBtn.setOnClickListener(this);
 
+        tv_p1 = findViewById(R.id.tv_p1);
+        tv_p2 = findViewById(R.id.tv_p2);
+
         pauseForeground = findViewById(R.id.pauseForeground);
 
         SharedPreferences sharedPreferences = getSharedPreferences("settings", Context.MODE_PRIVATE);
