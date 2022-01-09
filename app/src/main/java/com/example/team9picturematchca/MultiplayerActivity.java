@@ -1,7 +1,11 @@
 package com.example.team9picturematchca;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Handler;
+
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -42,6 +46,7 @@ public class MultiplayerActivity extends AppCompatActivity
     private MediaPlayer mediaPlayer;
     private ArrayList<MediaPlayer> mediaPlayers;
     private ArrayList<MatchImage> cardImages;
+    private int maxScore;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -114,6 +119,13 @@ public class MultiplayerActivity extends AppCompatActivity
                             p2Score++;
                             playSound(R.raw.matched);
                             tv_p2.setText("P2: "+ p2Score);
+                        }
+
+                        int score = p1Score + p2Score;
+                        maxScore = cardImages.size()/ 2;
+                        if (score == maxScore) {
+                            pauseBtn.setEnabled(false);
+                            winGameText();
                         }
 
                     } else{
@@ -305,6 +317,42 @@ public class MultiplayerActivity extends AppCompatActivity
             tv_p2.setTextColor(Color.GRAY);
             tv_p1.setTextColor(Color.BLACK);
         }
+    }
+
+    private void winGameText() {
+        String winner = "";
+        String msg = "";
+        if (p1Score > p2Score) {
+            winner = "P1 wins!";
+            msg = getString(R.string.p1winMsg);
+        } else if (p2Score > p1Score) {
+            winner = "P2 wins!";
+            msg = getString(R.string.p2winMsg);
+        } else if (p1Score == p2Score) {
+            winner = "Its a draw!";
+            msg = getString(R.string.drawMsg);
+        }
+
+        //infoTextView.setText(R.string.winGame_text);
+        AlertDialog.Builder dlg = new AlertDialog.Builder(this)
+                .setTitle(getString(R.string.gameover) + " " + winner)
+                .setMessage(msg)
+                .setPositiveButton(R.string.yes,
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                startActivity(new Intent(getBaseContext(), MultiplayerActivity.class));
+                            }
+                        })
+                .setNegativeButton(R.string.no,
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                startActivity(new Intent(getBaseContext(), MainActivity.class));
+                            }
+                        })
+                .setIcon(android.R.drawable.ic_popup_reminder);
+        dlg.show();
     }
 
 }

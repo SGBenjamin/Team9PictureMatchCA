@@ -55,6 +55,9 @@
     <string name="highscoreMsg">New highscore!\nDo you wish to play again?</string>
     <string name="yes">Play again</string>
     <string name="no">Return to main </string>
+    <string name="p1winMsg">P1 has won the game.\nDo you wish to play again?</string>
+    <string name="p2winMsg">P2 has won the game.\nDo you wish to play again?</string>
+    <string name="drawMsg">It was a draw.\nDo you wish to play again?</string>
 
 
     <string-array name="fetch_choices">
