@@ -71,7 +71,8 @@ public class MultiplayerActivity extends AppCompatActivity
             public void onItemClick(View itemView, int position) {
                 tv_p2 = findViewById(R.id.tv_p2);
                 tv_p1 = findViewById(R.id.tv_p1);
-                tv_p2.setTextColor(Color.GRAY);
+                // tv_p2.setTextColor(Color.GRAY);
+                setPlayerColour(tv_p1, tv_p2, turn);
                 infoTextView = findViewById(R.id.multitextInfo);
                 if (!gameStarted) {
                     gamePaused = false;
@@ -115,24 +116,13 @@ public class MultiplayerActivity extends AppCompatActivity
                             tv_p2.setText("P2: "+ p2Score);
                         }
 
-                        if(turn == 2){
-                            turn = 1;
-                            tv_p1.setTextColor(Color.GRAY);
-                            tv_p2.setTextColor(Color.BLACK);
-                        } else if (turn == 1) {
-                            turn = 1;
-                            tv_p2.setTextColor(Color.GRAY);
-                            tv_p1.setTextColor(Color.BLACK);
-                        }
                     } else{
                         if (turn == 1) {
                             turn = 2;
-                            tv_p1.setTextColor(Color.GRAY);
-                            tv_p2.setTextColor(Color.BLACK);
+                            setPlayerColour(tv_p1, tv_p2, turn);
                         } else if (turn == 2) {
                             turn = 1;
-                            tv_p2.setTextColor(Color.GRAY);
-                            tv_p1.setTextColor(Color.BLACK);
+                            setPlayerColour(tv_p1, tv_p2, turn);
                         }
                         wrongImagePairIsStillOpen = true;
                         didNotMatchText();
@@ -305,6 +295,16 @@ public class MultiplayerActivity extends AppCompatActivity
                 }
             }
         });
+    }
+
+    private void setPlayerColour (TextView tv_p1, TextView tv_p2, int turn) {
+        if(turn == 2){
+            tv_p1.setTextColor(Color.GRAY);
+            tv_p2.setTextColor(Color.BLACK);
+        } else if (turn == 1) {
+            tv_p2.setTextColor(Color.GRAY);
+            tv_p1.setTextColor(Color.BLACK);
+        }
     }
 
 }
