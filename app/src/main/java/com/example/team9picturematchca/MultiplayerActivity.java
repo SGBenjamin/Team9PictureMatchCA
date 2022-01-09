@@ -115,14 +115,14 @@ public class MultiplayerActivity extends AppCompatActivity
                         if(turn ==1 ) {
                             p1Score++;
                             playSound(R.raw.matched);
-                            firstCard.setColorFilter(0Xff00ff00, PorterDuff.Mode.MULTIPLY );
-                            secondCard.setColorFilter(0xff00ff00, PorterDuff.Mode.MULTIPLY );
+                            firstCard.setColorFilter(0Xff00ff00, PorterDuff.Mode.OVERLAY);
+                            secondCard.setColorFilter(0xff00ff00, PorterDuff.Mode.OVERLAY );
                             tv_p1.setText("P1: " + p1Score);
                         } else if (turn ==2) {
                             p2Score++;
                             playSound(R.raw.matched);
-                            firstCard.setColorFilter( 0xff0000ff, PorterDuff.Mode.MULTIPLY );
-                            secondCard.setColorFilter( 0xff0000ff, PorterDuff.Mode.MULTIPLY );
+                            firstCard.setColorFilter( 0xff0000ff, PorterDuff.Mode.OVERLAY );
+                            secondCard.setColorFilter( 0xff0000ff, PorterDuff.Mode.OVERLAY );
                             tv_p2.setText("P2: "+ p2Score);
                         }
 
