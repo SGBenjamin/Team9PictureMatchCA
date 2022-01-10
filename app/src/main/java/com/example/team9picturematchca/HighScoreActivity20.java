@@ -1,7 +1,5 @@
 package com.example.team9picturematchca;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -11,22 +9,19 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.w3c.dom.Text;
+import androidx.appcompat.app.AppCompatActivity;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Locale;
 
-public class HighScoreActivity extends AppCompatActivity {
-
-    List<String> arrHighScore = new ArrayList<>();
+public class HighScoreActivity20 extends AppCompatActivity {
+    List<String> arrHighScore20 = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_high_score);
+        setContentView(R.layout.activity_high_score20);
 
         TextView highscore1 = findViewById(R.id.highscore1);
         TextView highscore2 = findViewById(R.id.highscore2);
@@ -35,17 +30,17 @@ public class HighScoreActivity extends AppCompatActivity {
         TextView highscore5 = findViewById(R.id.highscore5);
 
         TextView[] highscores = {highscore1, highscore2, highscore3, highscore4, highscore5};
-        arrHighScore = getHSArray();
+        arrHighScore20 = getHSArray();
 
-        for (int i = 0; i < arrHighScore.size() ; i++) {
-            highscores[i].setText(arrHighScore.get(i));
+        for (int i = 0; i < arrHighScore20.size(); i++) {
+            highscores[i].setText(arrHighScore20.get(i));
         }
 
         Button resetBtn = findViewById(R.id.resetButton);
         resetBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                for (int i = 0; i < arrHighScore.size(); i++) {
+                for (int i = 0; i < arrHighScore20.size(); i++) {
                     highscores[i].setText("");
                 }
 
@@ -63,11 +58,11 @@ public class HighScoreActivity extends AppCompatActivity {
             }
         });
 
-        Button solo20Btn = findViewById(R.id.soloMatch20ScoreButton);
+        Button solo20Btn = findViewById(R.id.soloMatch12ScoreButton);
         solo20Btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), HighScoreActivity20.class);
+                Intent intent = new Intent(getApplicationContext(), HighScoreActivity.class);
                 startActivity(intent);
             }
         });
@@ -75,27 +70,25 @@ public class HighScoreActivity extends AppCompatActivity {
     }
 
     public List<String> getHSArray() {
-        SharedPreferences sp = this.getSharedPreferences("highScore", Activity.MODE_PRIVATE);
-        String highScoreString = sp.getString("highscoreString", "");
+        SharedPreferences sp = this.getSharedPreferences("highScore20", Activity.MODE_PRIVATE);
+        String highScoreString = sp.getString("highscoreString20", "");
 
         if (highScoreString == "") {
             return new ArrayList<String>();
-        }
-        else {
+        } else {
             List<String> highscoreList =
                     new ArrayList<String>(Arrays.asList(highScoreString.split(",")));
             return highscoreList;
         }
     }
 
-/*    public List<String> getPlayersArray(){
+/*    public List<String> getPlayersArray() {
         SharedPreferences sp = this.getSharedPreferences("playerNames", Activity.MODE_PRIVATE);
         String playerNameString = sp.getString("playerNameString", "");
 
         if (playerNameString == "") {
             return new ArrayList<String>();
-        }
-        else {
+        } else {
             List<String> playerNameList =
                     new ArrayList<String>(Arrays.asList(playerNameString.split(",")));
             return playerNameList;
@@ -105,15 +98,13 @@ public class HighScoreActivity extends AppCompatActivity {
     public void saveArray(List<String> highscores) {
         String highscoreString = "";
 
-        SharedPreferences sp = this.getSharedPreferences("highScore", Activity.MODE_PRIVATE);
+        SharedPreferences sp = this.getSharedPreferences("highScore20", Activity.MODE_PRIVATE);
         SharedPreferences.Editor editor = sp.edit();
 
         if (highscores != null) {
             highscoreString = String.join(",", highscores);
-            editor.putString("highScore", highscoreString);
+            editor.putString("highScore20", highscoreString);
             editor.apply();
         }
     }
-
-    // trying to push
 }

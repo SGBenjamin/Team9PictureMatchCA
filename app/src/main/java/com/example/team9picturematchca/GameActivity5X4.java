@@ -399,7 +399,7 @@ public class GameActivity5X4 extends AppCompatActivity implements View.OnClickLi
 
     public void saveArray(List<String> highscoreList) {
         String highscoreString;
-        SharedPreferences sp = this.getSharedPreferences("highScore", Activity.MODE_PRIVATE);
+        SharedPreferences sp = this.getSharedPreferences("highScore20", Activity.MODE_PRIVATE);
         SharedPreferences.Editor mEdit1 = sp.edit();
         if (highscoreList != null) {
             highscoreList.sort(Comparator.comparingInt(this::convertTime));
@@ -407,14 +407,14 @@ public class GameActivity5X4 extends AppCompatActivity implements View.OnClickLi
                 highscoreList.subList(5, highscoreList.size()).clear();
             }
             highscoreString = String.join(",", highscoreList);
-            mEdit1.putString("highscoreString", highscoreString);
+            mEdit1.putString("highscoreString20", highscoreString);
             mEdit1.apply();
         }
     }
 
     public List<String> getArray(){
         SharedPreferences sp = this.getSharedPreferences("highScore", Activity.MODE_PRIVATE);
-        String highscoreString = sp.getString("highscoreString","");
+        String highscoreString = sp.getString("highscoreString20","");
         if (highscoreString.equals("")){
             return new ArrayList<>();
         }
