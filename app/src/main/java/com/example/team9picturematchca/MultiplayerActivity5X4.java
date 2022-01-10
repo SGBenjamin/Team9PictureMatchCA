@@ -152,7 +152,7 @@ public class MultiplayerActivity5X4 extends AppCompatActivity
             }
         });
         gameRecyclerView.setAdapter(adapter);
-        int GRID_COLUMNS = 5;
+        int GRID_COLUMNS = 4;
         gameRecyclerView.setLayoutManager(new GridLayoutManager(this, GRID_COLUMNS));
 
         numCardOpened = 0;

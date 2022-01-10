@@ -130,14 +130,14 @@ public class GameActivity5X4 extends AppCompatActivity implements View.OnClickLi
                             //Save high scores
                             if (strHighscores.size() < 5 || timer < convertTime(strHighscores.get(4))) {
                                 // Sound effect for highscore
-                                playSound(R.raw.win);
+                                playSound(R.raw.winwhistle);
                                 highScoreText();
                                 String score = convertTime(timer);
                                 strHighscores.add(score);
                                 saveArray(strHighscores);
                             } else {
                                 // Sound effect for winning
-                                playSound(R.raw.win);
+                                playSound(R.raw.winwhistle);
                                 winGameText();
                             }
 
@@ -162,7 +162,7 @@ public class GameActivity5X4 extends AppCompatActivity implements View.OnClickLi
             }
         });
         gameRecyclerView.setAdapter(adapter);
-        int GRID_COLUMNS = 3;
+        int GRID_COLUMNS = 4;
         gameRecyclerView.setLayoutManager(new GridLayoutManager(this, GRID_COLUMNS));
 
         numCardOpened = 0;
