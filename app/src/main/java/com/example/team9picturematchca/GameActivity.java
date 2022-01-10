@@ -7,16 +7,13 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.drawable.ColorDrawable;
 import android.media.MediaPlayer;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
@@ -130,14 +127,14 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
                             //Save high scores
                             if (strHighscores.size() < 5 || timer < convertTime(strHighscores.get(4))) {
                                 // Sound effect for highscore
-                                playSound(R.raw.win);
+                                playSound(R.raw.highscore);
                                 highScoreText();
                                 String score = convertTime(timer);
                                 strHighscores.add(score);
                                 saveArray(strHighscores);
                             } else {
                                 // Sound effect for winning
-                                playSound(R.raw.win);
+                                playSound(R.raw.winwhistle);
                                 winGameText();
                             }
 
