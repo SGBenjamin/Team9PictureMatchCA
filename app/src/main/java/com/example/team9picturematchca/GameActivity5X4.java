@@ -162,7 +162,7 @@ public class GameActivity5X4 extends AppCompatActivity implements View.OnClickLi
             }
         });
         gameRecyclerView.setAdapter(adapter);
-        int GRID_COLUMNS = 3;
+        int GRID_COLUMNS = 4;
         gameRecyclerView.setLayoutManager(new GridLayoutManager(this, GRID_COLUMNS));
 
         numCardOpened = 0;
