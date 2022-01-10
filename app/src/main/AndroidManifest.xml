@@ -11,7 +11,8 @@
         android:label="Match Nine"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Fullscreen">
+        android:theme="@style/Fullscreen"
+        android:usesCleartextTraffic="true">
         <activity
             android:name=".MultiplayerActivity"
             android:exported="false" />
@@ -23,6 +24,9 @@
             android:exported="false" />
         <activity
             android:name=".HighScoreActivity"
+            android:exported="false" />
+        <activity
+            android:name=".WebViewActivity"
             android:exported="false" />
         <activity android:name=".HighScoreActivity20"
             android:exported="false" />
