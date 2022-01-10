@@ -143,7 +143,7 @@ public class MultiplayerActivity5X4 extends AppCompatActivity
                         }
                         wrongImagePairIsStillOpen = true;
                         didNotMatchText();
-                        playSound(R.raw.notmatched);
+                        playSound(R.raw.uhoh);
                         closeBothImagesAfterTwoSeconds();
                     }
                     processing = false;

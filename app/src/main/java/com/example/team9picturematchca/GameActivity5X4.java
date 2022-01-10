@@ -153,7 +153,7 @@ public class GameActivity5X4 extends AppCompatActivity implements View.OnClickLi
                         wrongImagePairIsStillOpen = true;
                         didNotMatchText();
                         // Sound effect for wrong match
-                        playSound(R.raw.notmatched);
+                        playSound(R.raw.uhoh);
                         closeBothImagesAfterTwoSeconds();
                     }
                     processing = false;
@@ -162,7 +162,7 @@ public class GameActivity5X4 extends AppCompatActivity implements View.OnClickLi
             }
         });
         gameRecyclerView.setAdapter(adapter);
-        int GRID_COLUMNS = 4;
+        int GRID_COLUMNS = 3;
         gameRecyclerView.setLayoutManager(new GridLayoutManager(this, GRID_COLUMNS));
 
         numCardOpened = 0;

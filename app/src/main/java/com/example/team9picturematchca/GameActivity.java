@@ -150,7 +150,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
                         wrongImagePairIsStillOpen = true;
                         didNotMatchText();
                         // Sound effect for wrong match
-                        playSound(R.raw.notmatched);
+                        playSound(R.raw.uhoh);
                         closeBothImagesAfterTwoSeconds();
                     }
                     processing = false;
