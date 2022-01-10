@@ -138,7 +138,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
                                 winGameText();
                             }
 
-                           // returnToMainActivityAfterFourSeconds();
+                            // returnToMainActivityAfterFourSeconds();
                         } else {
                             // Game not yet end
                             matchedText();
@@ -237,7 +237,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
                         @Override public void run() {
                             // second quarter turn
                             v.setForeground(new ColorDrawable(
-                                    ContextCompat.getColor(GameActivity.this, R.color.teal_200)));
+                                    ContextCompat.getColor(GameActivity.this, R.color.sweetcorn)));
                             v.setRotationY(90);
                             v.animate().withLayer().rotationY(0).setDuration(300).start();
                             flipping = false;
@@ -423,7 +423,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     public String convertTime(Integer intTime){
-       // int hours = intTime / 3600;
+        // int hours = intTime / 3600;
         int minutes = (intTime % 3600) / 60;
         int seconds = intTime % 60;
         return String.format(Locale.getDefault(), "%02d:%02d",

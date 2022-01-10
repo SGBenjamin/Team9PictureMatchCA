@@ -240,7 +240,7 @@ public class GameActivity5X4 extends AppCompatActivity implements View.OnClickLi
                         @Override public void run() {
                             // second quarter turn
                             v.setForeground(new ColorDrawable(
-                                    ContextCompat.getColor(GameActivity5X4.this, R.color.teal_200)));
+                                    ContextCompat.getColor(GameActivity5X4.this, R.color.sweetcorn)));
                             v.setRotationY(90);
                             v.animate().withLayer().rotationY(0).setDuration(300).start();
                             flipping = false;

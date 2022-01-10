@@ -4,31 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/morning_glory"
     tools:context=".MultiplayerActivity">
 
     <TextView
         android:id="@+id/tv_p1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="50dp"
-        android:textSize="32sp"
-        android:textColor="#000000"
+        android:layout_marginLeft="50dp"
         android:text="P1: 0"
-        tools:ignore="MissingConstraints" />
+        android:textColor="#000000"
+        android:textSize="32sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="16dp" />
 
     <TextView
         android:id="@+id/tv_p2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="50dp"
-        android:textSize="32sp"
-        android:textColor="#000000"
+        android:layout_marginRight="50dp"
         android:text="P2: 0"
-        tools:ignore="MissingConstraints" />
+        android:textColor="#000000"
+        android:textSize="32sp"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="16dp" />
 
     <Button
         android:id="@+id/multibackBtn"
@@ -72,7 +73,7 @@
         android:layout_marginBottom="20dp"
         android:text="@string/pause_buttontext"
         android:visibility="invisible"
-        app:backgroundTint="@android:color/holo_orange_dark"
+        app:backgroundTint="@color/brown"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 

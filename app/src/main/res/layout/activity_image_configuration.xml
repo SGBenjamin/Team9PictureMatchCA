@@ -17,10 +17,10 @@
             android:layout_width="140dp"
             android:layout_height="100dp"
             android:contentDescription="Game Image"
-            android:foreground="@color/teal_200"
+            android:foreground="@color/sweetcorn"
             android:scaleType="centerCrop"
             tools:srcCompat="@tools:sample/avatars" />
-        
+
     </androidx.cardview.widget.CardView>
 
 </LinearLayout>

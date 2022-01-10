@@ -244,7 +244,7 @@ public class MultiplayerActivity extends AppCompatActivity
                         @Override public void run() {
                             // second quarter turn
                             v.setForeground(new ColorDrawable(
-                                    ContextCompat.getColor(MultiplayerActivity.this, R.color.teal_200)));
+                                    ContextCompat.getColor(MultiplayerActivity.this, R.color.sweetcorn)));
                             v.setRotationY(90);
                             v.animate().withLayer().rotationY(0).setDuration(300).start();
                             flipping = false;
