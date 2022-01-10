@@ -24,6 +24,8 @@
         <activity
             android:name=".HighScoreActivity"
             android:exported="false" />
+        <activity android:name=".HighScoreActivity20"
+            android:exported="false" />
         <activity
             android:name=".GameActivity5X4"
             android:exported="false"/>
