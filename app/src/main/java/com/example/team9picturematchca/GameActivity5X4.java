@@ -123,8 +123,8 @@ public class GameActivity5X4 extends AppCompatActivity implements View.OnClickLi
                             pauseBtn.setEnabled(false);
                             //Save high scores
                             if (strHighscores.size() < 5 || timer < convertTime(strHighscores.get(4))) {
-                                // Sound effect for highscore
-                                playSound(R.raw.winwhistle);
+                                // Sound effect for highscores
+                                playSound(R.raw.highscore);
                                 highScoreText();
                                 String score = convertTime(timer);
                                 strHighscores.add(score);
@@ -389,7 +389,7 @@ public class GameActivity5X4 extends AppCompatActivity implements View.OnClickLi
     }
 
     public List<String> getArray(){
-        SharedPreferences sp = this.getSharedPreferences("highScore", Activity.MODE_PRIVATE);
+        SharedPreferences sp = this.getSharedPreferences("highScore20", Activity.MODE_PRIVATE);
         String highscoreString = sp.getString("highscoreString20","");
         if (highscoreString.equals("")){
             return new ArrayList<>();
