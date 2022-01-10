@@ -367,6 +367,7 @@ public class ImagesActivity extends AppCompatActivity implements View.OnClickLis
 
         public boolean save(Bitmap image, String filename) {
             File dir = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
+            System.out.println("save dir :" + Environment.DIRECTORY_PICTURES);
             File file = new File(dir, filename);
 
             if (file.exists()) {
