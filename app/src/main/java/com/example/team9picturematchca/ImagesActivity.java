@@ -324,7 +324,7 @@ public class ImagesActivity extends AppCompatActivity implements View.OnClickLis
         @Override
         public void run() {
             startUI();
-
+            delallsavedImages();
             for (int i = 0; i < bitmaps.size(); i++) {
                 if (Thread.interrupted()) {
                     concludeUI(false);
@@ -344,13 +344,29 @@ public class ImagesActivity extends AppCompatActivity implements View.OnClickLis
 
         }
 
+        public void delallsavedImages(){
+            File dir = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
+
+            String[]entries = dir.list();
+            if(dir.list().length >0 ){
+                for(String s: entries){
+                    File currentFile = new File(dir.getPath(),s);
+                    System.out.println("del file name : " +  currentFile );
+                    currentFile.delete();
+                }
+            }
+
+        }
+
         public boolean save(Bitmap image, String filename) {
             File dir = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
             File file = new File(dir, filename);
 
             if (file.exists()) {
                 file.delete();
+                System.out.println("del file name : " +  dir.list().length );
             }
+
 
             try {
                 FileOutputStream out = new FileOutputStream(file);
