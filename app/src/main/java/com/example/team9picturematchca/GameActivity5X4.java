@@ -123,7 +123,7 @@ public class GameActivity5X4 extends AppCompatActivity implements View.OnClickLi
                             pauseBtn.setEnabled(false);
                             //Save high scores
                             if (strHighscores.size() < 5 || timer < convertTime(strHighscores.get(4))) {
-                                // Sound effect for highscore
+                                // Sound effect for highscores
                                 playSound(R.raw.highscore);
                                 highScoreText();
                                 String score = convertTime(timer);
