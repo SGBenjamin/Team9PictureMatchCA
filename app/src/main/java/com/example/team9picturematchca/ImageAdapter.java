@@ -20,11 +20,11 @@ import java.util.List;
 
 public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ViewHolder> {
 
-    private boolean useGlide;
+//    private boolean useGlide;
     private List<MatchImage> matchImages;
 
-    public ImageAdapter(boolean useGlide, List<MatchImage> matchImages) {
-        this.useGlide = useGlide;
+    public ImageAdapter( List<MatchImage> matchImages) {
+//        this.useGlide = useGlide;
         this.matchImages = matchImages;
     }
 

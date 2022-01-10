@@ -71,7 +71,7 @@ public class MultiplayerActivity5X4 extends AppCompatActivity
 
         RecyclerView gameRecyclerView = findViewById(R.id.gameRecyclerView);
         cardImages = MatchImage.createMatchImgList(this);
-        ImageAdapter adapter = new ImageAdapter( sharedPreferences.getString("glide", "No").equals("Yes"), cardImages);
+        ImageAdapter adapter = new ImageAdapter( cardImages);
         adapter.setOnItemClickListener(new ImageAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View itemView, int position) {

@@ -83,7 +83,8 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
         for(MatchImage matchImage: cardImages ){
             System.out.println("Game activity image path :" + matchImage.getImgPath());
         }
-        ImageAdapter adapter = new ImageAdapter( sharedPreferences.getString("glide", "No").equals("Yes"), cardImages);
+//        ImageAdapter adapter = new ImageAdapter( sharedPreferences.getString("glide", "No").equals("Yes"), cardImages);
+        ImageAdapter adapter = new ImageAdapter(  cardImages);
         adapter.setOnItemClickListener(new ImageAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View itemView, int position) {
