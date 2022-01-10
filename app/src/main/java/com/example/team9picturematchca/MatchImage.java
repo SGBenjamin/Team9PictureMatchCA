@@ -30,11 +30,14 @@ public class MatchImage {
         ArrayList<MatchImage> images = new ArrayList<>();
 
         File imgDir = context.getExternalFilesDir(Environment.DIRECTORY_PICTURES);
+        System.out.println("match dir :" + Environment.DIRECTORY_PICTURES);
+
         File[] imgInDir = imgDir.listFiles();
 
         int id = 1;
 
         for (File file : imgInDir){
+            System.out.println("match pic path: " + file);
             String imgPath =file.getAbsolutePath();
             MatchImage matchImage = new MatchImage(id, imgPath);
             images.add(matchImage);

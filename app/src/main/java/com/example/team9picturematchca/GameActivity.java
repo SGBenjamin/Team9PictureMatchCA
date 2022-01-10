@@ -80,6 +80,9 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
 
         RecyclerView gameRecyclerView = findViewById(R.id.gameRecyclerView);
         cardImages = MatchImage.createMatchImgList(this);
+        for(MatchImage matchImage: cardImages ){
+            System.out.println("Game activity image path :" + matchImage.getImgPath());
+        }
         ImageAdapter adapter = new ImageAdapter( sharedPreferences.getString("glide", "No").equals("Yes"), cardImages);
         adapter.setOnItemClickListener(new ImageAdapter.OnItemClickListener() {
             @Override
@@ -108,6 +111,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
                     // Reveal image
                     flipCard(firstCard);
                     firstCardId = cardImages.get(position).getImagenum();
+                    System.out.println("first card :" + cardImages.get(position).getImgPath());
                     numCardOpened = 1;
                 } else if (numCardOpened == 1) {
                     // Clicked on second image
