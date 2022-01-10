@@ -25,6 +25,11 @@
             android:name=".HighScoreActivity"
             android:exported="false" />
         <activity
+            android:name=".GameActivity5X4"
+            android:exported="false"/>
+        <activity android:name=".MultiplayerActivity5X4"
+            android:exported="false"/>
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

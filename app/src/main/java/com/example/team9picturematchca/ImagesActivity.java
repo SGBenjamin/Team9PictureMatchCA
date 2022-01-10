@@ -57,6 +57,14 @@ public class ImagesActivity extends AppCompatActivity implements View.OnClickLis
         gamemode = intent.getStringExtra("gamemode");
         System.out.println("gamemode: " + gamemode);
 
+
+//        if(gamemode.equals("solo")||gamemode.equals("multiplayer")){
+//            setContentView(R.layout.activity_images);
+//        } else if(gamemode.equals("solo20")||gamemode.equals("multiplayer20")){
+//            setContentView(R.layout.activity_images5x4);
+//        }
+
+
         recyclerView = findViewById(R.id.recyclerView);
         recyclerAdapter = new RecyclerAdapter(this);
         recyclerView.setLayoutManager(new GridLayoutManager(this, 3));
@@ -104,12 +112,26 @@ public class ImagesActivity extends AppCompatActivity implements View.OnClickLis
             imageView.setBackground(null);
             checkBox.setVisibility(View.INVISIBLE);
         }
-
-        if (recyclerAdapter.getSelectedImgs().size() == 6) {
-            startButton.setEnabled(true);
-        } else if (startButton.isEnabled()) {
-            startButton.setEnabled(false);
+        if(gamemode.equals("sole")||gamemode.equals("multi")){
+            if (recyclerAdapter.getSelectedImgs().size() == 6) {
+                startButton.setEnabled(true);
+            } else if (startButton.isEnabled()) {
+                startButton.setEnabled(false);
+            }
+        }else if(gamemode.equals("sole20")||gamemode.equals("multi20")){
+            if (recyclerAdapter.getSelectedImgs().size() == 10) {
+                startButton.setEnabled(true);
+            } else if (startButton.isEnabled()) {
+                startButton.setEnabled(false);
+            }
         }
+
+//        if (recyclerAdapter.getSelectedImgs().size() == 6) {
+//            startButton.setEnabled(true);
+//        } else if (startButton.isEnabled()) {
+//            startButton.setEnabled(false);
+//        }
+
     }
 
     @Override
@@ -383,6 +405,14 @@ public class ImagesActivity extends AppCompatActivity implements View.OnClickLis
                         }else if( gamemode.equals("multi") ){
                             System.out.println("con gamemode:" + gamemode + "success");
                             Intent intent = new Intent(getApplicationContext(), MultiplayerActivity.class);
+                            startActivity(intent);
+                        }else if( gamemode.equals("sole20")){
+                            System.out.println("con gamemode:" + gamemode + "success");
+                            Intent intent = new Intent(getApplicationContext(), GameActivity5X4.class);
+                            startActivity(intent);
+                        }else if( gamemode.equals("multi20") ){
+                            System.out.println("con gamemode:" + gamemode + "success");
+                            Intent intent = new Intent(getApplicationContext(), MultiplayerActivity5X4.class);
                             startActivity(intent);
                         }
                     }

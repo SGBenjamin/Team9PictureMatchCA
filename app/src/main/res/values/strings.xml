@@ -20,8 +20,10 @@
     <string name="jsoup_settings">Enable Glide library: </string>
     <string name="glide_settings">Enable jsoup library: </string>
     <string name="reminder_text">Please select 6 images only</string>
+    <string name="reminder_text10">Please select 10 images only</string>
 
     <string name="default_matches">0/6 matches</string>
+    <string name="default_matches10">0/10 matches</string>
     <string name="default_time">Time: 00:00</string>
     <string name="game_welcome">Welcome to the memory game!</string>
     <string name="pause_buttontext">Pause</string>

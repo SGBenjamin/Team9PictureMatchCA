@@ -11,6 +11,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     Button multiMatch;
     Button soloMatch;
+    Button multiMatch20;
+    Button soloMatch20;
     Button highScores;
 
     @Override
@@ -28,6 +30,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         multiMatch = findViewById(R.id.multiMatch);
         multiMatch.setOnClickListener(this);
 
+        soloMatch20 = findViewById(R.id.soloMatch20);
+        soloMatch20.setOnClickListener(this);
+
+        multiMatch20 = findViewById(R.id.multiMatch20);
+        multiMatch20.setOnClickListener(this);
+
         highScores = findViewById(R.id.highscoreBtn);
         highScores.setOnClickListener(this);
     }
@@ -42,10 +50,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Intent intent = new Intent(getApplicationContext(), ImagesActivity.class);
             intent.putExtra("gamemode" , "sole");
             startActivity(intent);
-        }else if(buttonId == R.id.multiMatch){
+        }else if(buttonId == R.id.multiMatch) {
             Intent intent = new Intent(getApplicationContext(), ImagesActivity.class);
-            intent.putExtra("gamemode" , "multi");
+            intent.putExtra("gamemode", "multi");
             startActivity(intent);
+        }else if(buttonId == R.id.soloMatch20 ){
+                Intent intent = new Intent(getApplicationContext(), ImagesActivity.class);
+                intent.putExtra("gamemode" , "sole20");
+                startActivity(intent);
+        }else if(buttonId == R.id.multiMatch20){
+                Intent intent = new Intent(getApplicationContext(), ImagesActivity.class);
+                intent.putExtra("gamemode" , "multi20");
+                startActivity(intent);
         } else if (buttonId == R.id.highscoreBtn){
             Intent intent = new Intent(getApplicationContext(), HighScoreActivity.class);
             startActivity(intent);
