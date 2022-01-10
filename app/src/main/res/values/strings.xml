@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Team9PictureMatchCA</string>
-    <string name="App_title">Team 9 Matching Game</string>
+    <string name="App_title">Team 9 Memory Game</string>
 
     <string name="enterURLText">Please enter the website URL to select pictures.</string>
     <string name="url_placeholder">Enter URL here</string>
