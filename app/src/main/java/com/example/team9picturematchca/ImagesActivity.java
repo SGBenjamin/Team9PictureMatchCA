@@ -1,25 +1,26 @@
 package com.example.team9picturematchca;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
+import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.webkit.URLUtil;
-import android.widget.*;
-import androidx.appcompat.app.AppCompatActivity;
-import android.os.Bundle;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.ProgressBar;
+import android.widget.TextView;
+import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
-import com.bumptech.glide.request.RequestOptions;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -28,7 +29,6 @@ import org.jsoup.select.Elements;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.Locale;
 import java.util.concurrent.ExecutionException;
@@ -57,13 +57,6 @@ public class ImagesActivity extends AppCompatActivity implements View.OnClickLis
         Intent intent = getIntent();
         gamemode = intent.getStringExtra("gamemode");
         System.out.println("gamemode: " + gamemode);
-
-//        if(gamemode.equals("solo")||gamemode.equals("multiplayer")){
-//            setContentView(R.layout.activity_images);
-//        } else if(gamemode.equals("solo20")||gamemode.equals("multiplayer20")){
-//            setContentView(R.layout.activity_images5x4);
-//        }
-
 
         recyclerView = findViewById(R.id.recyclerView);
         recyclerAdapter = new RecyclerAdapter(this);
@@ -132,13 +125,6 @@ public class ImagesActivity extends AppCompatActivity implements View.OnClickLis
                 startButton.setEnabled(false);
             }
         }
-
-//        if (recyclerAdapter.getSelectedImgs().size() == 6) {
-//            startButton.setEnabled(true);
-//        } else if (startButton.isEnabled()) {
-//            startButton.setEnabled(false);
-//        }
-
     }
 
     @Override

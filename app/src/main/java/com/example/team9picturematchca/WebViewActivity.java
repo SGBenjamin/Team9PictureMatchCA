@@ -33,7 +33,6 @@ public class WebViewActivity extends AppCompatActivity {
         WebSettings webSettings = mWebView.getSettings();
         webSettings.setJavaScriptEnabled(true);
 
-//        mWebView.setWebViewClient(new WebViewClient());
         mWebView.setWebChromeClient(new WebChromeClient() {
             public void onProgressChanged(WebView webView, int newProgress) {
                 if (newProgress == 100) {
@@ -61,7 +60,6 @@ public class WebViewActivity extends AppCompatActivity {
         @Override
         public boolean shouldOverrideUrlLoading(WebView view, String url) {
             if(url.contains("nus.edu.sg")){
-//            if ("nus.edu.sg".equals(Uri.parse(url).getHost())) {
                 return false;
             }
 

@@ -126,10 +126,5 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- pushing -->
-    app:layout_constraintRight_toRightOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/welcomeSplash" />
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

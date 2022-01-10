@@ -1,14 +1,11 @@
 package com.example.team9picturematchca;
 
 import android.content.Intent;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import androidx.appcompat.app.AppCompatActivity;
 
-import android.os.Bundle;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     public static final String EXTERNAL_URL = "externalUrl";
@@ -23,10 +20,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
-       //downloadImgBtn = findViewById(R.id.dlImages);
-        //downloadImgBtn.setOnClickListener(this);
 
         soloMatch = findViewById(R.id.soloMatch);
         soloMatch.setOnClickListener(this);
@@ -53,46 +46,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
     }
-
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        // Inflate the menu; this adds items to the action bar if it is present.
-//        MenuInflater inflater = getMenuInflater();
-//        inflater.inflate(R.menu.menu_main, menu);
-//        return true;
-//    }
-
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item) {
-//        // Handle action bar item clicks here. The action bar will
-//        // automatically handle clicks on the Home/Up button, so long
-//        // as you specify a parent activity in AndroidManifest.xml.
-//        int id = item.getItemId();
-//
-//        // Interrupt before switching to menu
-////        if (imageProcess != null) {
-////            imageProcess.interrupt();
-////        }
-//
-//        //noinspection SimplifiableIfStatement
-//        if (id == R.id.abtApp) {
-////            String externalUrl =
-////                    "https://www.iss.nus.edu.sg/graduate-programmes/programme/detail/graduate-diploma-in-systems-analysis";
-//            Intent intent = new Intent(this, WebViewActivity.class);
-////            intent.putExtra(EXTERNAL_URL, externalUrl);
-//            startActivity(intent);
-//        }
-//
-////        if (id == R.id.highscore) {
-////            Intent intent = new Intent(this, HighscoreActivity.class);
-////            startActivity(intent);
-////        }
-//
-//        return super.onOptionsItemSelected(item);
-//    }
-
-
-
     @Override
     public void onClick(View view) {
         int buttonId = view.getId();
@@ -124,6 +77,4 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         intent.putExtra(EXTERNAL_URL, externalUrl);
         startActivity(intent);
     }
-
-    // trying to push
 }

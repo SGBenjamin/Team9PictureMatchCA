@@ -33,19 +33,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/leaderboardLabel" />
 
-    <!--    <TextView
-            android:id="@+id/userName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="28dp"
-            android:text="@string/playerName"
-            android:textSize="15sp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/leaderboardLabel"
-            tools:layout_editor_absoluteX="161dp"
-            tools:layout_editor_absoluteY="78dp" />-->
-    <!-- commenting out -->
 
     <TextView
         android:id="@+id/timing"
@@ -207,6 +194,6 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
 
-    <!-- pushing -->
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

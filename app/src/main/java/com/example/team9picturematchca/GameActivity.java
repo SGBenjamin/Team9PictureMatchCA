@@ -1,7 +1,6 @@
 package com.example.team9picturematchca;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -48,15 +47,12 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
     private Button pauseBtn;
     private TextView infoTextView;
     private TextView pauseForeground;
-    //private String infoText;
+
 
     private List<String> strHighscores = new ArrayList<>();
 
     private MediaPlayer mediaPlayer;
     private ArrayList<MediaPlayer> mediaPlayers;
-
-    //new by YJ
-//    private int turn = 1;
 
 
     @Override
@@ -74,7 +70,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
 
         pauseForeground = findViewById(R.id.pauseForeground);
 
-        SharedPreferences sharedPreferences = getSharedPreferences("settings", Context.MODE_PRIVATE);
+
 
         mediaPlayers = new ArrayList<>();
 
@@ -83,7 +79,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
         for(MatchImage matchImage: cardImages ){
             System.out.println("Game activity image path :" + matchImage.getImgPath());
         }
-//        ImageAdapter adapter = new ImageAdapter( sharedPreferences.getString("glide", "No").equals("Yes"), cardImages);
+
         ImageAdapter adapter = new ImageAdapter(  cardImages);
         adapter.setOnItemClickListener(new ImageAdapter.OnItemClickListener() {
             @Override
@@ -102,7 +98,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
                     return;
                 }
                 if (wrongImagePairIsStillOpen) {
-                    //waitToast();
+
                     return;
                 }
 
@@ -143,7 +139,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
                                 winGameText();
                             }
 
-                            // returnToMainActivityAfterFourSeconds();
+
                         } else {
                             // Game not yet end
                             matchedText();
@@ -269,7 +265,6 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
 
     public void pauseGame() {
         gamePaused = true;
-        // playSound(R.raw.game_pause);
         pauseForeground.setVisibility(View.VISIBLE);
         pauseBtn.setText("Resume");
         stopTimer();
@@ -278,7 +273,6 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
     public void resumeGame() {
         gamePaused = false;
         timerIsRunning = true;
-        // playSound(R.raw.game_resume);
         pauseForeground.setVisibility(View.INVISIBLE);
         pauseBtn.setText("Pause");
         startTimer();
@@ -340,7 +334,6 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void winGameText() {
-        //infoTextView.setText(R.string.winGame_text);
         AlertDialog.Builder dlg = new AlertDialog.Builder(this)
                 .setTitle(getString(R.string.gameover)+ " Score: "+convertTime(timer))
                 .setMessage(getString(R.string.gameoverMsg))
@@ -363,7 +356,6 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void highScoreText() {
-        //infoTextView.setText(R.string.highScore_text);
         AlertDialog.Builder dlg = new AlertDialog.Builder(this)
                 .setTitle(getString(R.string.gameover) + " Score: " +convertTime(timer))
                 .setMessage(getString(R.string.highscoreMsg))
@@ -384,20 +376,6 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
                 .setIcon(android.R.drawable.ic_popup_reminder);
         dlg.show();
     }
-
-/*    private void waitToast() {
-        Toast.makeText(this, "Please wait for wrong image pair to close.",
-                Toast.LENGTH_SHORT).show();
-    }*/
-
-/*    private void returnToMainActivityAfterFourSeconds() {
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                finish();
-            }
-        }, 4000);
-    }*/
 
     public void saveArray(List<String> highscoreList) {
         String highscoreString;
@@ -428,7 +406,6 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     public String convertTime(Integer intTime){
-        // int hours = intTime / 3600;
         int minutes = (intTime % 3600) / 60;
         int seconds = intTime % 60;
         return String.format(Locale.getDefault(), "%02d:%02d",
@@ -437,7 +414,6 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
 
     public int convertTime(String strTime) {
         String[] timeUnits = strTime.split(":");
-        //int hours = Integer.parseInt(timeUnits[0]) * 60 * 60;
         int minutes = Integer.parseInt(timeUnits[0]) * 60;
         int seconds = Integer.parseInt(timeUnits[1]);
         return minutes + seconds;

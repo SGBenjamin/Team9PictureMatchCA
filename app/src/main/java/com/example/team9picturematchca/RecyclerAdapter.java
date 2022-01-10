@@ -3,7 +3,6 @@ package com.example.team9picturematchca;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
-import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -71,7 +70,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 
     @Override
     public int getItemCount() {
-        return imgs.size(); // no. of rows in Recycler View
+        return imgs.size();
     }
 
     class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{

@@ -1,7 +1,5 @@
 package com.example.team9picturematchca;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -11,13 +9,11 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.w3c.dom.Text;
+import androidx.appcompat.app.AppCompatActivity;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Locale;
 
 public class HighScoreActivity extends AppCompatActivity {
 
@@ -88,19 +84,6 @@ public class HighScoreActivity extends AppCompatActivity {
         }
     }
 
-/*    public List<String> getPlayersArray(){
-        SharedPreferences sp = this.getSharedPreferences("playerNames", Activity.MODE_PRIVATE);
-        String playerNameString = sp.getString("playerNameString", "");
-
-        if (playerNameString == "") {
-            return new ArrayList<String>();
-        }
-        else {
-            List<String> playerNameList =
-                    new ArrayList<String>(Arrays.asList(playerNameString.split(",")));
-            return playerNameList;
-        }
-    }*/
 
     public void saveArray(List<String> highscores) {
         String highscoreString = "";
@@ -114,6 +97,4 @@ public class HighScoreActivity extends AppCompatActivity {
             editor.apply();
         }
     }
-
-    // trying to push
 }

@@ -1,10 +1,19 @@
 package com.example.team9picturematchca;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.ColorDrawable;
+import android.media.MediaPlayer;
+import android.os.Bundle;
 import android.os.Handler;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,29 +21,14 @@ import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Context;
-import android.content.SharedPreferences;
-import android.graphics.Color;
-import android.media.MediaPlayer;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.TextView;
-
-import org.w3c.dom.Text;
-
 import java.util.ArrayList;
-import java.util.Locale;
 
 public class MultiplayerActivity5X4 extends AppCompatActivity
         implements View.OnClickListener {
 
-    //    GameActivity gameactivity = new GameActivity();
-    private int timer;
+
     private int turn = 1;
     private int p1Score = 0, p2Score = 0;
-    private boolean timerIsRunning;
     private int numCardOpened;
     private ImageView firstCard, secondCard;
     private int firstCardId, secondCardId;
@@ -65,19 +59,17 @@ public class MultiplayerActivity5X4 extends AppCompatActivity
 
         pauseForeground = findViewById(R.id.multipauseForeground);
 
-        SharedPreferences sharedPreferences = getSharedPreferences("settings", Context.MODE_PRIVATE);
 
         mediaPlayers = new ArrayList<>();
 
         RecyclerView gameRecyclerView = findViewById(R.id.gameRecyclerView);
         cardImages = MatchImage.createMatchImgList(this);
-        ImageAdapter adapter = new ImageAdapter( cardImages);
+        ImageAdapter adapter = new ImageAdapter(cardImages);
         adapter.setOnItemClickListener(new ImageAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View itemView, int position) {
                 tv_p2 = findViewById(R.id.tv_p2);
                 tv_p1 = findViewById(R.id.tv_p1);
-                // tv_p2.setTextColor(Color.GRAY);
                 setPlayerColour(tv_p1, tv_p2, turn);
                 infoTextView = findViewById(R.id.multitextInfo);
                 if (!gameStarted) {
@@ -256,14 +248,11 @@ public class MultiplayerActivity5X4 extends AppCompatActivity
 
     public void pauseGame() {
         gamePaused = true;
-        // playSound(R.raw.game_pause);
         pauseForeground.setVisibility(View.VISIBLE);
         pauseBtn.setText("Resume");
-        stopTimer();
+
     }
-    protected void stopTimer() {
-        timerIsRunning = false;
-    }
+
     protected void closeBothImagesAfterTwoSeconds() {
         new Handler().postDelayed(new Runnable() {
             @Override
@@ -289,30 +278,9 @@ public class MultiplayerActivity5X4 extends AppCompatActivity
 
     public void resumeGame() {
         gamePaused = false;
-        // timerIsRunning = true;
-        // playSound(R.raw.game_resume);
         pauseForeground.setVisibility(View.INVISIBLE);
         pauseBtn.setText("Pause");
-        // startTimer();
     }
-
-   /* private void startTimer() {
-        final TextView timerTextView = findViewById(R.id.textTimer);
-        final Handler handler = new Handler();
-        handler.post(new Runnable() {
-            @Override
-            public void run() {
-                int minutes = (timer % 3600) / 60;
-                int seconds = timer % 60;
-                String time = String.format(Locale.getDefault(), "Time: %02d:%02d", minutes, seconds);
-                timerTextView.setText(time);
-                if (timerIsRunning) {
-                    timer++;
-                    handler.postDelayed(this, 1000);
-                }
-            }
-        });
-    }*/
 
     private void setPlayerColour (TextView tv_p1, TextView tv_p2, int turn) {
         if(turn == 2){
@@ -338,7 +306,6 @@ public class MultiplayerActivity5X4 extends AppCompatActivity
             msg = getString(R.string.drawMsg);
         }
 
-        //infoTextView.setText(R.string.winGame_text);
         AlertDialog.Builder dlg = new AlertDialog.Builder(this)
                 .setTitle(getString(R.string.gameover) + " " + winner)
                 .setMessage(msg)

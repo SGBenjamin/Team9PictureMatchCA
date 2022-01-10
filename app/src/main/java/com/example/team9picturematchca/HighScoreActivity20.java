@@ -82,19 +82,6 @@ public class HighScoreActivity20 extends AppCompatActivity {
         }
     }
 
-/*    public List<String> getPlayersArray() {
-        SharedPreferences sp = this.getSharedPreferences("playerNames", Activity.MODE_PRIVATE);
-        String playerNameString = sp.getString("playerNameString", "");
-
-        if (playerNameString == "") {
-            return new ArrayList<String>();
-        } else {
-            List<String> playerNameList =
-                    new ArrayList<String>(Arrays.asList(playerNameString.split(",")));
-            return playerNameList;
-        }
-    }*/
-
     public void saveArray(List<String> highscores) {
         String highscoreString = "";
 
