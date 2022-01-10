@@ -11,7 +11,7 @@
         android:id="@+id/leaderboardLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/solo12leaderboard"
+        android:text="@string/solo20leaderboard"
         android:textSize="35sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -32,18 +32,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/leaderboardLabel" />
 
-<!--    <TextView
-        android:id="@+id/userName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:text="@string/playerName"
-        android:textSize="15sp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/leaderboardLabel"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="78dp" />-->
+    <!--    <TextView
+            android:id="@+id/userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="@string/playerName"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/leaderboardLabel"
+            tools:layout_editor_absoluteX="161dp"
+            tools:layout_editor_absoluteY="78dp" />-->
     <!-- commenting out -->
 
     <TextView
@@ -174,15 +174,16 @@
         app:layout_constraintLeft_toRightOf="@id/rank5th"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/highscore4" />
+
     <Button
-        android:id="@+id/soloMatch20ScoreButton"
+        android:id="@+id/soloMatch12ScoreButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginBottom="165dp"
-        android:text="Solo 10 LEADERBOARD"/>
+        android:text="Solo 6 LEADERBOARD"/>
     <Button
         android:id="@+id/resetButton"
         android:layout_width="wrap_content"

@@ -40,6 +40,8 @@
     <string name="highscore_button">Leaderboard</string>
 
     <string name="leaderboard">LEADERBOARD</string>
+    <string name="solo12leaderboard">SOLO 6 LEADERBOARD</string>
+    <string name="solo20leaderboard">SOLO 10 LEADERBOARD</string>
     <string name="ranking">Ranking</string>
     <string name="playerName">Player\'s Name</string>
     <string name="timeTaken">Time Taken</string>
