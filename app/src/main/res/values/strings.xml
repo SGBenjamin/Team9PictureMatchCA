@@ -5,7 +5,7 @@
     <string name="App_title">Team 9 Matching Game</string>
     <string name="UserId">User ID:</string>
 
-    <string name="scrollingTtl_text">Please enter the website URL to select pictures.</string>
+    <string name="enterURLText">Please enter the website URL to select pictures.</string>
     <string name="url_placeholder">Enter URL here</string>
     <string name="fetchBtn_text">Fetch</string>
     <string name="startBtn_text">Start!</string>
