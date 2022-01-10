@@ -48,6 +48,7 @@ public class ImagesActivity extends AppCompatActivity implements View.OnClickLis
     Handler Handler = new Handler();
     String gamemode;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -76,6 +77,13 @@ public class ImagesActivity extends AppCompatActivity implements View.OnClickLis
         // indicate info like start load images , download images , save images
         textView = findViewById(R.id.textView);
         findViewById(R.id.scrollText).setSelected(true);
+
+        if(gamemode.equals("sole") || gamemode.equals("multi")){
+            selectText.setText("select  6 images");
+        }else if(gamemode.equals("sole20") ||gamemode.equals("multi20") ){
+            selectText.setText("select  10 images");
+        }
+
 
         progressBar = findViewById(R.id.progressBar);
 
