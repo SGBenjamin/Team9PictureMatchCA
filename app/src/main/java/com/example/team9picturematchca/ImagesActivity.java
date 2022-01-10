@@ -58,7 +58,6 @@ public class ImagesActivity extends AppCompatActivity implements View.OnClickLis
         gamemode = intent.getStringExtra("gamemode");
         System.out.println("gamemode: " + gamemode);
 
-
 //        if(gamemode.equals("solo")||gamemode.equals("multiplayer")){
 //            setContentView(R.layout.activity_images);
 //        } else if(gamemode.equals("solo20")||gamemode.equals("multiplayer20")){
@@ -79,9 +78,9 @@ public class ImagesActivity extends AppCompatActivity implements View.OnClickLis
         findViewById(R.id.scrollText).setSelected(true);
 
         if(gamemode.equals("sole") || gamemode.equals("multi")){
-            selectText.setText("select  6 images");
+            selectText.setText("Please select  6 images");
         }else if(gamemode.equals("sole20") ||gamemode.equals("multi20") ){
-            selectText.setText("select  10 images");
+            selectText.setText("Please select  10 images");
         }
 
 
