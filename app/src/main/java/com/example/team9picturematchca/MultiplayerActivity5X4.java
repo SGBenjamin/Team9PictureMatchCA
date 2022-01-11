@@ -311,7 +311,7 @@ public class MultiplayerActivity5X4 extends AppCompatActivity
                         new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
-                                startActivity(new Intent(getBaseContext(), MultiplayerActivity.class));
+                                startActivity(new Intent(getBaseContext(), MultiplayerActivity5X4.class));
                             }
                         })
                 .setNegativeButton(R.string.no,
