@@ -2,13 +2,39 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.team9picturematchca">
 
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="Match Nine"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Fullscreen">
+        android:theme="@style/Fullscreen"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".MultiplayerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ImagesActivity"
+            android:exported="true" />
+        <activity
+            android:name=".GameActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HighScoreActivity"
+            android:exported="false" />
+        <activity
+            android:name=".WebViewActivity"
+            android:exported="false" />
+        <activity android:name=".HighScoreActivity20"
+            android:exported="false" />
+        <activity
+            android:name=".GameActivity5X4"
+            android:exported="false"/>
+        <activity android:name=".MultiplayerActivity5X4"
+            android:exported="false"/>
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -18,6 +44,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>

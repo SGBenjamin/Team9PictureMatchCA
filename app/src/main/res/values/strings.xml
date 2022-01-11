@@ -1,6 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Team9PictureMatchCA</string>
-    <string name="Username">Username:</string>
-    <string name="App_title">Team 9 Matching Game</string>
-    <string name="UserId">User ID:</string>
+    <string name="App_title">Team 9 Memory Game</string>
+
+    <string name="enterURLText">Please enter the website URL to select pictures.</string>
+    <string name="url_placeholder">Enter URL here</string>
+    <string name="fetchBtn_text">Fetch</string>
+    <string name="startBtn_text">Start!</string>
+    <string name="back_buttontext">Back</string>
+    <string name="save_buttontext">Save Changes</string>
+    <string name="default_buttontext">Restore Default</string>
+    <string name="score">Score: 0</string>
+    <string name="recyclerImageView">ImageView in RecyclerView</string>
+    <string name="reminder_text">Please select 6 images only</string>
+    <string name="reminder_text10">Please select 10 images only</string>
+
+    <string name="default_matches">0/6 matches</string>
+    <string name="default_matches10">0/10 matches</string>
+    <string name="default_time">Time: 00:00</string>
+    <string name="game_welcome">Welcome to the memory game!</string>
+    <string name="pause_buttontext">Pause</string>
+    <string name="paused_text">PAUSED</string>
+
+    <string name="firstHighScore">1st</string>
+    <string name="secondHighScore">2nd</string>
+    <string name="thirdHighScore">3rd</string>
+    <string name="fourthHighScore">4th</string>
+    <string name="fifthHighScore">5th</string>
+
+    <string name="reset_button">Reset</string>
+    <string name="return_button">Return</string>
+    <string name="highscore_button">Leaderboard</string>
+
+    <string name="leaderboard">LEADERBOARD</string>
+    <string name="solo12leaderboard">SOLO 6 LEADERBOARD</string>
+    <string name="solo20leaderboard">SOLO 10 LEADERBOARD</string>
+    <string name="ranking">Ranking</string>
+    <string name="timeTaken">Time Taken</string>
+
+    <string name="contentdesc">View of item within each row</string>
+
+    <string name="no_match_text">Wrong match</string>
+    <string name="select_cards_text">Select 2 cards</string>
+    <string name="cards_matched_text">Good job!</string>
+    <string name="process_images">Starting to process images..</string>
+    <string name="download_images">Downloading images..</string>
+    <string name="game_start">Start game</string>
+    <string name="gameover">Game Over!</string>
+    <string name="gameoverMsg">You have won the game.\nDo you wish to play again?</string>
+    <string name="highscoreMsg">New highscore!\nDo you wish to play again?</string>
+    <string name="yes">Play again</string>
+    <string name="no">Return to main </string>
+    <string name="p1winMsg">P1 has won the game.\nDo you wish to play again?</string>
+    <string name="p2winMsg">P2 has won the game.\nDo you wish to play again?</string>
+    <string name="drawMsg">It was a draw.\nDo you wish to play again?</string>
+
+
 </resources>

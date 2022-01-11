@@ -3,8 +3,31 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/GDIPSA/Mobile Development/Team9PictureMatchCA/app/src/main/res/drawable/border.xml" value="0.41041666666666665" />
+        <entry key="..\:/GDIPSA/Mobile Development/Team9PictureMatchCA/app/src/main/res/drawable/cicle.xml" value="0.346875" />
+        <entry key="..\:/GDIPSA/Mobile Development/Team9PictureMatchCA/app/src/main/res/drawable/ic_launcher_background.xml" value="0.346875" />
+        <entry key="..\:/GDIPSA/Mobile Development/Team9PictureMatchCA/app/src/main/res/drawable/red_border.xml" value="0.346875" />
+        <entry key="..\:/GDIPSA/Mobile Development/Team9PictureMatchCA/app/src/main/res/drawable/tickbox.xml" value="0.346875" />
+        <entry key="..\:/GDIPSA/Mobile Development/Team9PictureMatchCA/app/src/main/res/layout/activity_game.xml" value="0.5541666666666667" />
+        <entry key="..\:/GDIPSA/Mobile Development/Team9PictureMatchCA/app/src/main/res/layout/activity_game5x4.xml" value="0.3307291666666667" />
+        <entry key="..\:/GDIPSA/Mobile Development/Team9PictureMatchCA/app/src/main/res/layout/activity_high_score.xml" value="0.33" />
+        <entry key="..\:/GDIPSA/Mobile Development/Team9PictureMatchCA/app/src/main/res/layout/activity_high_score20.xml" value="0.33177083333333335" />
+        <entry key="..\:/GDIPSA/Mobile Development/Team9PictureMatchCA/app/src/main/res/layout/activity_image_configuration.xml" value="0.39427083333333335" />
+        <entry key="..\:/GDIPSA/Mobile Development/Team9PictureMatchCA/app/src/main/res/layout/activity_images.xml" value="0.33125" />
+        <entry key="..\:/GDIPSA/Mobile Development/Team9PictureMatchCA/app/src/main/res/layout/activity_images5x4.xml" value="0.3307291666666667" />
+        <entry key="..\:/GDIPSA/Mobile Development/Team9PictureMatchCA/app/src/main/res/layout/activity_item.xml" value="0.39427083333333335" />
         <entry key="..\:/GDIPSA/Mobile Development/Team9PictureMatchCA/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/GDIPSA/Mobile Development/Team9PictureMatchCA/app/src/main/res/layout/activity_multiplayer.xml" value="0.3307291666666667" />
+        <entry key="..\:/GDIPSA/Mobile Development/Team9PictureMatchCA/app/src/main/res/layout/activity_multiplayer5x4.xml" value="0.31666666666666665" />
+        <entry key="..\:/GDIPSA/Mobile Development/Team9PictureMatchCA/app/src/main/res/layout/activity_web_view.xml" value="0.3307291666666667" />
+        <entry key="..\:/GDIPSA/Mobile Development/Team9PictureMatchCA/app/src/main/res/layout/red_background.xml" value="0.39427083333333335" />
+        <entry key="..\:/GDIPSA/Mobile Development/Team9PictureMatchCA/app/src/main/res/layout/red_border.xml" value="0.3307291666666667" />
         <entry key="..\:/GDIPSA/Mobile Development/Team9PictureMatchCA/app/src/main/res/layout/styles.xml" value="0.5401041666666667" />
+        <entry key="..\:/GDIPSA/Mobile Development/Team9PictureMatchCA/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.346875" />
+        <entry key="..\:/GDIPSA/Mobile Development/Team9PictureMatchCA/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.346875" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.2859375" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2859375" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.2859375" />
       </map>
     </option>
   </component>

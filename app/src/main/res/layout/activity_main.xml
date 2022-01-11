@@ -4,133 +4,127 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/morning_glory"
     tools:context=".MainActivity">
 
     <ImageView
         android:id="@+id/welcomeSplash"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:src="@drawable/cards"
+        android:layout_height="365dp"
+        android:backgroundTint="@color/white"
         android:contentDescription="splashImage"
+        android:src="@drawable/memorygame"
         app:flow_horizontalBias="0.0"
-        app:layout_constraintBottom_toTopOf="@id/soloMatch12"
+        app:layout_constraintBottom_toTopOf="@id/highscoreBtn"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        android:backgroundTint="@color/white"/>
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/App_title"
-        android:textSize="40sp"
         android:textAlignment="center"
+        android:textColor="@color/brown"
+        android:textSize="35sp"
         android:textStyle="bold"
-        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-
-    <TextView
-        android:id="@+id/UserName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="25sp"
-        android:text="@string/Username"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.6" />
-
-    <TextView
-        android:id="@+id/UserId"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="25sp"
-        android:text="@string/UserId"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.675" />
-
-    <Button
-        android:id="@+id/soloMatch12"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/teal_700"
-        android:text="Solo Match 12"
-        app:cornerRadius="15dp"
-        app:layout_constraintBottom_toTopOf="@id/multiMatch12"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.075"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/multiMatch12"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/teal_700"
-        android:text="Multi Match 12"
-        app:cornerRadius="15dp"
-        app:layout_constraintBottom_toTopOf="@id/SoloMatch20"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="0.932"
-        app:layout_constraintHorizontal_bias="0.075"/>
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.02" />
 
     <Button
-        android:id="@+id/SoloMatch20"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
+        android:id="@+id/soloMatch"
+        android:layout_width="175dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginRight="20dp"
+        android:backgroundTint="@color/teal_700"
+        android:text="Solo Match"
+        android:textSize="20sp"
+        app:cornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/highscoreBtn" />
+
+    <Button
+        android:id="@+id/multiMatch"
+        android:layout_width="175dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginRight="20dp"
+        android:backgroundTint="@color/teal_700"
+        android:text="Multi Match"
+        android:textSize="20sp"
+        app:cornerRadius="15dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toRightOf="@id/soloMatch"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/highscoreBtn" />
+
+    <Button
+        android:id="@+id/soloMatch20"
+        android:layout_width="175dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginRight="20dp"
         android:backgroundTint="@color/teal_700"
         android:text="Solo Match 20"
+        android:textSize="20sp"
         app:cornerRadius="15dp"
-        app:layout_constraintBottom_toTopOf="@id/multiMatch20"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="0.932"
-        app:layout_constraintHorizontal_bias="0.075"/>
+        app:layout_constraintTop_toBottomOf="@id/soloMatch" />
 
     <Button
         android:id="@+id/multiMatch20"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
+        android:layout_width="175dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="28dp"
         android:backgroundTint="@color/teal_700"
         android:text="Multi Match 20"
-        app:cornerRadius="15dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="0.932"
-        app:layout_constraintHorizontal_bias="0.075"/>
-
-    <Button
-        android:id="@+id/dlImages"
-        android:layout_width="180dp"
-        android:layout_height="190dp"
-        android:backgroundTint="@color/teal_700"
-        android:text="Download Images"
         android:textSize="20sp"
         app:cornerRadius="15dp"
+        app:layout_constraintLeft_toRightOf="@id/soloMatch20"
+        app:layout_constraintTop_toBottomOf="@id/multiMatch" />
+
+    <Button
+        android:id="@+id/highscoreBtn"
+        android:layout_width="300dp"
+        android:layout_height="75sp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginBottom="30dp"
+        android:text="@string/leaderboard"
+        android:textAllCaps="true"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@id/soloMatch"
+        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/welcomeSplash" />
+
+    <Button
+        android:id="@+id/abtT9Btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="About"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintVertical_bias="0.1"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintHorizontal_bias="0.975"/>
-
-
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
